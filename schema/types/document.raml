@@ -1,0 +1,18 @@
+#%RAML 1.0 DataType
+
+type: object
+properties:
+  id: integer
+  name: string
+  ownerId: integer
+  substituteDocumentId: integer
+  attributeValues:
+    type: array
+    items:
+      type: object
+      properties:
+        id: integer
+        value: string
+  templateId: integer
+
+example: !include ../examples/Document.json

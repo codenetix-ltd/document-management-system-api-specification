@@ -1,0 +1,33 @@
+image: docker:latest
+
+stages:
+  - build
+#  - deploy
+
+variables:
+  DOC_CONTAINER_IMAGE: doc:$CI_REGISTRY_IMAGE:$CI_BUILD_REF_NAME
+  MOCK_CONTAINER_IMAGE: mock:$CI_REGISTRY_IMAGE:$CI_BUILD_REF_NAME
+
+before_script:
+  - docker login -u gitlab-ci-token -p $CI_BUILD_TOKEN $CI_REGISTRY
+
+build_mock:
+  stage: build
+  script:
+    - docker build --pull -f mock/Dockerfile -t $MOCK_CONTAINER_IMAGE .
+    - docker push $MOCK_CONTAINER_IMAGE
+
+build_doc:
+  stage: build
+  script:
+    - docker build --pull -f documentation/Dockerfile -t $DOC_CONTAINER_IMAGE .
+    - docker push $DOC_CONTAINER_IMAGE
+
+#deploy_dev:
+#  variables:
+#    GIT_STRATEGY: none
+#  stage: deploy
+#  only:
+#    - dev
+#  script:
+#    - docker run --env RANCHER_URL="http://rancher.codenetix.com/v1/projects/1a28" --env RANCHER_ACCESS_KEY="$RANCHER_ACCESS_KEY" --env RANCHER_SECRET_KEY="$RANCHER_SECRET_KEY" --env RANCHER_STACK_ID="1st16" --env RANCHER_STACK_NAME="dev" --env RANCHER_SERVICE_NAME="app" mildberrydigital/rancher-remote-upgrade:latest app

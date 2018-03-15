@@ -1,0 +1,31 @@
+#%RAML 1.0 ResourceType
+get:
+  queryParameters:
+    with?:
+      description: Expand embeded entityes
+      type: string
+      example: user,type
+  responses:
+    200:
+      body:
+        application/json:
+          type: <<responseItem>>
+
+put:
+  queryParameters:
+    with?:
+      description: Expand embeded entityes
+      type: string
+      example: user,type
+  body:
+    application/json:
+      type: <<putRequestItem>>
+  responses:
+    200:
+      body:
+        application/json:
+          <<responseItem>>
+
+delete:
+  responses:
+    204:

@@ -1,0 +1,65 @@
+#%RAML 1.0
+
+title: DMS API
+version: v1
+baseUri: http://api.samplehost.com/{version}
+types:
+  User: !include types/user.raml
+  UserRequest: !include requestTypes/user.raml
+  Template: !include types/template.raml
+  TemplateRequest: !include requestTypes/template.raml
+  Attribute: !include types/attribute.raml
+  AttributeRequest: !include requestTypes/attribute.raml
+  Type: !include types/type.raml
+  Document: !include types/document.raml
+  DocumentPost: !include requestTypes/document.raml
+  DocumentPut: !include requestTypes/documentPut.raml
+resourceTypes:
+  PaginateCollection: !include ./resourceTypes/paginateCollection.raml
+  Item: !include ./resourceTypes/item.raml
+
+/users:
+  type:
+    PaginateCollection:
+      responseItem: User
+      postRequestItem: UserRequest
+      examplesJson: !include examples/Users.json
+  /{id}:
+    type:
+      Item:
+        responseItem: User
+        putRequestItem: UserRequest
+
+/templates:
+  type:
+    PaginateCollection:
+      responseItem: Template
+      postRequestItem: TemplateRequest
+      examplesJson: !include examples/Templates.json
+  /{id}:
+    type:
+      Item:
+        responseItem: Template
+        putRequestItem: TemplateRequest
+    /attributes:
+      type:
+        PaginateCollection:
+          responseItem: Attribute
+          postRequestItem: AttributeRequest
+          examplesJson: !include examples/Attributes.json
+      /{attributeId}:
+        type:
+          Item:
+            responseItem: Attribute
+            putRequestItem: AttributeRequest
+/documents:
+  type:
+    PaginateCollection:
+      responseItem: Document
+      postRequestItem: DocumentPost
+      examplesJson: !include examples/Documents.json
+  /{id}:
+    type:
+      Item:
+        responseItem: Document
+        putRequestItem: DocumentPut

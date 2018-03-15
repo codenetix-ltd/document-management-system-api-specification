@@ -1,0 +1,82 @@
+#%RAML 1.0 ResourceType
+
+get:
+  queryParameters:
+    page?:
+      description: Page number
+      type: integer
+      example: 1
+    perPage?:
+      description: Number of items per page
+      type: integer
+      example: 20
+    sortField?:
+      description: Sorting field
+      type: string
+      example: id
+    sortDirection?:
+      description: Sorting direction
+      enum: [desc, asc]
+      default: asc
+      example: desc
+    with?:
+      description: Expand embeded entityes
+      type: string
+      example: user,type
+  responses:
+    200:
+      body:
+        application/json:
+          type: object
+          properties:
+            links:
+              type: object
+              properties:
+                first: string
+                last: string
+                prev: string
+                next: string
+            meta:
+              type: object
+              properties:
+                currentPage: integer
+                from: integer
+                lastPage: integer
+                path: string
+                perPage: integer
+                to: integer
+                total: integer
+            data?: <<responseItem>>[]
+          example: |
+            {
+              "links": {
+                "first": "first_page",
+                "last": "last_page",
+                "prev": "prev_page",
+                "next": "next_page"
+              },
+              "meta": {
+                "currentPage": 1,
+                "from": 1,
+                "lastPage": 10,
+                "path": "path",
+                "perPage": 15,
+                "to": 10,
+                "total": 255
+              },
+              "data": <<examplesJson>>
+            }
+post:
+  queryParameters:
+    with?:
+      description: Expand embeded entityes
+      type: string
+      example: user,type
+  body:
+    application/json:
+      type: <<postRequestItem>>
+  responses:
+    201:
+      body:
+        application/json:
+          <<responseItem>>
