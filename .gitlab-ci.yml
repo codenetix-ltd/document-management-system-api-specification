@@ -16,12 +16,16 @@ build_mock:
   script:
     - docker build --pull -f mock/Dockerfile -t $MOCK_CONTAINER_IMAGE .
     - docker push $MOCK_CONTAINER_IMAGE
+  tags:
+    - docker-build
 
 build_doc:
   stage: build
   script:
     - docker build --pull -f documentation/Dockerfile -t $DOC_CONTAINER_IMAGE .
     - docker push $DOC_CONTAINER_IMAGE
+  tags:
+    - docker-build
 
 #deploy_dev:
 #  variables:
