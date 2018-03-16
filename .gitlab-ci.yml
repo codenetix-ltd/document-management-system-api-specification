@@ -39,10 +39,12 @@ build_test:
 test_api:
   stage: test
   script:
+    - docker stop $(docker ps -q)
+    - docker rm $(docker ps -a -q)
     - docker run --name mock -p 8005:80 -d $MOCK_CONTAINER_IMAGE
-    - docker run --env TESTING_URI=http://api/v1 --link mock:api $TEST_CONTAINER_IMAGE
+    - docker run --name test --env TESTING_URI=http://api/v1 --link mock:api $TEST_CONTAINER_IMAGE
     - docker stop mock
-    - docker rm mock
+    - docker rm mock test
   tags:
     - docker-build
 
