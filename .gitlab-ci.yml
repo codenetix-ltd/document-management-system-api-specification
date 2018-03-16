@@ -31,7 +31,7 @@ build_doc:
 build_test:
   stage: build
   script:
-    - docker build --pull -f documentation/Dockerfile -t $TEST_CONTAINER_IMAGE .
+    - docker build --pull -f test/Dockerfile -t $TEST_CONTAINER_IMAGE .
     - docker push $TEST_CONTAINER_IMAGE
   tags:
     - docker-build
@@ -39,6 +39,8 @@ build_test:
 test_api:
   stage: test
   script:
+    - docker stop mock test
+    - docker rm mock test
     - docker run --name mock -p 8005:80 -d $MOCK_CONTAINER_IMAGE
     - docker run --name test --env TESTING_URI=http://api/v1 --link mock:api $TEST_CONTAINER_IMAGE
     - docker stop mock
