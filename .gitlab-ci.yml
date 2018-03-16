@@ -38,13 +38,16 @@ build_test:
 
 test_api:
   stage: test
+  services:
+    -
+      name: $MOCK_CONTAINER_IMAGE
+      alias: mock
   script:
-    - docker stop mock test
-    - docker rm mock test
-    - docker run --name mock -p 8005:80 -d $MOCK_CONTAINER_IMAGE
+    - docker stop mock test || true
+    - docker rm mock test || true
+#    - docker run --name mock -p 8005:80 -d $MOCK_CONTAINER_IMAGE
     - docker run --name test --env TESTING_URI=http://api/v1 --link mock:api $TEST_CONTAINER_IMAGE
-    - docker stop mock
-    - docker rm mock test
+    - docker rm test
   tags:
     - docker-build
 
