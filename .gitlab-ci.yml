@@ -41,6 +41,8 @@ test_api:
   script:
     - docker pull $TEST_CONTAINER_IMAGE
     - docker run --env TESTING_URI=http://api/v1 --link api:$MOCK_CONTAINER_IMAGE $TEST_CONTAINER_IMAGE
+  tags:
+    - docker-build
 
 #deploy_dev:
 #  variables:
