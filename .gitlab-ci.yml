@@ -39,7 +39,7 @@ build_test:
 test_api:
   stage: test
   variables:
-    TESTING_URI=http://api/v1
+    TESTING_URI: http://api/v1
   image: $TEST_CONTAINER_IMAGE
   services:
     -
