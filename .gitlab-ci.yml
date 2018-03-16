@@ -39,7 +39,7 @@ build_test:
 test_api:
   stage: test
   script:
-    - docker run --name mock -p 8005:80 $MOCK_CONTAINER_IMAGE
+    - docker run --name mock -p 8005:80 -d $MOCK_CONTAINER_IMAGE
     - docker run --env TESTING_URI=http://api/v1 --link api:mock $TEST_CONTAINER_IMAGE
   tags:
     - docker-build
