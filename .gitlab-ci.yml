@@ -45,8 +45,8 @@ test_api:
     -
       name: $MOCK_CONTAINER_IMAGE
       alias: api
-#  script:
-
+  script:
+    - echo 40
   tags:
     - docker-build
 
