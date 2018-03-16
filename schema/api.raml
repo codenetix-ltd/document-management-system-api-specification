@@ -25,6 +25,11 @@ resourceTypes:
       postRequestItem: UserRequest
       examplesJson: !include examples/Users.json
   /{id}:
+    uriParameters:
+      id:
+        type: integer
+        example: 1
+        default: 1
     type:
       Item:
         responseItem: User
@@ -37,6 +42,11 @@ resourceTypes:
       postRequestItem: TemplateRequest
       examplesJson: !include examples/Templates.json
   /{id}:
+    uriParameters:
+      id:
+        type: integer
+        example: 1
+        default: 1
     type:
       Item:
         responseItem: Template
@@ -48,6 +58,11 @@ resourceTypes:
           postRequestItem: AttributeRequest
           examplesJson: !include examples/Attributes.json
       /{attributeId}:
+        uriParameters:
+          attributeId:
+            type: integer
+            example: 1
+            default: 1
         type:
           Item:
             responseItem: Attribute
@@ -59,6 +74,11 @@ resourceTypes:
       postRequestItem: DocumentPost
       examplesJson: !include examples/Documents.json
   /{id}:
+    uriParameters:
+      id:
+        type: integer
+        example: 1
+        default: 1
     type:
       Item:
         responseItem: Document

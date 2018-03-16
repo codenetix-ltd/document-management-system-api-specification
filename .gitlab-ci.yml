@@ -2,11 +2,12 @@ image: docker:latest
 
 stages:
   - build
-#  - deploy
+  - test
 
 variables:
   DOC_CONTAINER_IMAGE: $CI_REGISTRY_IMAGE:doc-$CI_BUILD_REF_NAME
   MOCK_CONTAINER_IMAGE: $CI_REGISTRY_IMAGE:mock-$CI_BUILD_REF_NAME
+  TEST_CONTAINER_IMAGE: $CI_REGISTRY_IMAGE:test-$CI_BUILD_REF_NAME
 
 before_script:
   - docker login -u gitlab-ci-token -p $CI_BUILD_TOKEN $CI_REGISTRY
@@ -27,11 +28,25 @@ build_doc:
   tags:
     - docker-build
 
-#deploy_dev:
-#  variables:
-#    GIT_STRATEGY: none
-#  stage: deploy
-#  only:
-#    - dev
-#  script:
-#    - docker run --env RANCHER_URL="http://rancher.codenetix.com/v1/projects/1a28" --env RANCHER_ACCESS_KEY="$RANCHER_ACCESS_KEY" --env RANCHER_SECRET_KEY="$RANCHER_SECRET_KEY" --env RANCHER_STACK_ID="1st16" --env RANCHER_STACK_NAME="dev" --env RANCHER_SERVICE_NAME="app" mildberrydigital/rancher-remote-upgrade:latest app
+build_test:
+  stage: build
+  script:
+    - docker build --pull -f documentation/Dockerfile -t $TEST_CONTAINER_IMAGE .
+    - docker push $TEST_CONTAINER_IMAGE
+  tags:
+    - docker-build
+
+test_api:
+  stage: test
+  script:
+    - docker pull $TEST_CONTAINER_IMAGE
+    - docker run --env TESTING_URI=http://api/v1 --link api:$CONTAINER_IMAGE $TEST_CONTAINER_IMAGE
+
+deploy_dev:
+  variables:
+    GIT_STRATEGY: none
+  stage: deploy
+  only:
+    - dev
+  script:
+    - docker run --env RANCHER_URL="http://rancher.codenetix.com/v1/projects/1a17584" --env RANCHER_ACCESS_KEY="$RANCHER_ACCESS_KEY" --env RANCHER_SECRET_KEY="$RANCHER_SECRET_KEY" --env RANCHER_STACK_ID="1st133" --env RANCHER_STACK_NAME="Default" --env RANCHER_SERVICE_NAME="app" mildberrydigital/rancher-remote-upgrade:latest app
