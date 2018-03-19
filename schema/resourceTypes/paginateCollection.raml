@@ -25,6 +25,8 @@ get:
       example: user,type
   responses:
     200:
+      description:
+        List of items
       body:
         application/json:
           type: object
@@ -77,6 +79,8 @@ post:
       type: <<postRequestItem>>
   responses:
     201:
+      description:
+        Creted item
       body:
         application/json:
           <<responseItem>>
