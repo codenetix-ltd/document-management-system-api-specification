@@ -43,7 +43,7 @@ deploy_mock:
   only:
     - master
   script:
-    - docker run --env RANCHER_URL="http://rancher.codenetix.com/v1/projects/1a17584" --env RANCHER_ACCESS_KEY="$RANCHER_ACCESS_KEY" --env RANCHER_SECRET_KEY="$RANCHER_SECRET_KEY" --env RANCHER_STACK_ID="1st133" --env RANCHER_STACK_NAME="Default" --env RANCHER_SERVICE_NAME="mock" mildberrydigital/rancher-remote-upgrade:latest
+    - docker run --env RANCHER_URL="http://rancher.codenetix.com/v1/projects/1a17584" --env RANCHER_ACCESS_KEY="$RANCHER_ACCESS_KEY" --env RANCHER_SECRET_KEY="$RANCHER_SECRET_KEY" --env RANCHER_STACK_ID="1st133" --env RANCHER_STACK_NAME="Default" --env RANCHER_SERVICE_NAME="mock" mildberrydigital/rancher-remote-upgrade:latest mock proxy
   tags:
     - docker-build
 
@@ -54,6 +54,6 @@ deploy_doc:
   only:
     - master
   script:
-    - docker run --env RANCHER_URL="http://rancher.codenetix.com/v1/projects/1a17584" --env RANCHER_ACCESS_KEY="$RANCHER_ACCESS_KEY" --env RANCHER_SECRET_KEY="$RANCHER_SECRET_KEY" --env RANCHER_STACK_ID="1st133" --env RANCHER_STACK_NAME="Default" --env RANCHER_SERVICE_NAME="documentation" mildberrydigital/rancher-remote-upgrade:latest
+    - docker run --env RANCHER_URL="http://rancher.codenetix.com/v1/projects/1a17584" --env RANCHER_ACCESS_KEY="$RANCHER_ACCESS_KEY" --env RANCHER_SECRET_KEY="$RANCHER_SECRET_KEY" --env RANCHER_STACK_ID="1st133" --env RANCHER_STACK_NAME="Default" --env RANCHER_SERVICE_NAME="documentation" mildberrydigital/rancher-remote-upgrade:latest documentation proxy
   tags:
     - docker-build
