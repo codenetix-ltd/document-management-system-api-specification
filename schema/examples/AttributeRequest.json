@@ -1,0 +1,56 @@
+{
+  "name": "Duis co",
+  "table": {
+    "columns": [
+      {
+        "name": "occaecat in",
+        "typeId": 94734396
+      },
+      {
+        "name": "amet Ut reprehenderit nostrud",
+        "typeId": 21812796
+      },
+      {
+        "name": "laboris ut elit sint ea",
+        "typeId": 86223732
+      },
+      {
+        "name": "officia ex proident elit",
+        "typeId": 15091827
+      }
+    ],
+    "rows": [
+      {
+        "columns": [
+          {
+            "isLocked": true,
+            "typeId": 12352593
+          },
+          {
+            "isLocked": true,
+            "typeId": 55153445
+          },
+          {
+            "isLocked": true,
+            "typeId": 15409476
+          }
+        ],
+        "name": "officia"
+      },
+      {
+        "columns": [
+          {
+            "isLocked": true,
+            "typeId": 45772870
+          },
+          {
+            "isLocked": true,
+            "typeId": 23205834
+          }
+        ],
+        "name": "occaecat non est amet"
+      }
+    ]
+  },
+  "typeId": 18990499
+}

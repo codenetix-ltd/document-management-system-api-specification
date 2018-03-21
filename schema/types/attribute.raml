@@ -23,9 +23,11 @@ properties:
                   isLocked: boolean
                   type: !include type.raml
       columns:
-        type: object
-        properties:
-          name: string
-          type: !include type.raml
+        type: array
+        items:
+          type: object
+          properties:
+            name: string
+            type: !include type.raml
 
 example: !include ../examples/Attribute.json

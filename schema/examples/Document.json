@@ -1,29 +1,32 @@
 {
-    "attributeValues": [
-        {
-            "id": 1678489,
-            "value": "sint dolore magna irure ad"
-        },
-        {
-            "id": 10247726,
-            "value": "magna"
-        },
-        {
-            "id": 17576801,
-            "value": "exercitation Duis commodo"
-        },
-        {
-            "id": 66187836,
-            "value": "reprehenderit voluptate amet anim aliqua"
-        },
-        {
-            "id": 31514628,
-            "value": "magna in adipisicing Ut"
-        }
-    ],
-    "id": 39086701,
-    "name": "in mollit id",
-    "ownerId": 96037664,
-    "substituteDocumentId": 17341514,
-    "templateId": 17949002
+  "attributeValues": [
+    {
+      "id": 15457349,
+      "value": "ipsum veniam adipisicing"
+    },
+    {
+      "id": 17265040,
+      "value": "id consequat cupidatat"
+    },
+    {
+      "id": 13705867,
+      "value": "pariatur in"
+    },
+    {
+      "id": 19006072,
+      "value": "veniam ut"
+    },
+    {
+      "id": 18993286,
+      "value": "nulla est anim ipsum in"
+    }
+  ],
+  "createdAt": 77398658,
+  "id": 75660736,
+  "labelId": 18893844,
+  "name": "enim minim ut dolore do",
+  "ownerId": 95873068,
+  "substituteDocumentId": 14829624,
+  "templateId": 87508330,
+  "updatedAt": 55694781
 }

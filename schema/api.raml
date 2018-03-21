@@ -12,8 +12,8 @@ types:
   AttributeRequest: !include requestTypes/attribute.raml
   Type: !include types/type.raml
   Document: !include types/document.raml
-  DocumentPost: !include requestTypes/document.raml
-  DocumentPut: !include requestTypes/documentPut.raml
+  DocumentPostRequest: !include requestTypes/document.raml
+  DocumentPutRequest: !include requestTypes/documentPut.raml
 resourceTypes:
   PaginateCollection: !include ./resourceTypes/paginateCollection.raml
   Item: !include ./resourceTypes/item.raml
@@ -71,7 +71,7 @@ resourceTypes:
   type:
     PaginateCollection:
       responseItem: Document
-      postRequestItem: DocumentPost
+      postRequestItem: DocumentPostRequest
       examplesJson: !include examples/Documents.json
   /{id}:
     uriParameters:
@@ -82,4 +82,4 @@ resourceTypes:
     type:
       Item:
         responseItem: Document
-        putRequestItem: DocumentPut
+        putRequestItem: DocumentPutRequest
