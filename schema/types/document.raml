@@ -17,5 +17,8 @@ properties:
   createdAt: integer
   updatedAt: integer
   labelId: integer
+  label: !include label.raml
+  owner: !include user.raml
+  template: !include template.raml
 
 example: !include ../examples/Document.json
