@@ -4,5 +4,8 @@ type: object
 properties:
   id: integer
   name: string
+  attributes:
+    type: array
+    items: !include attribute.raml
 
 example: !include ../examples/Template.json
