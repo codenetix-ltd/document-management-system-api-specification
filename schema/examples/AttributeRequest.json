@@ -1,96 +1,13 @@
 {
-  "name": "Fresh",
-  "typeId": 83537416,
+  "name": "USB",
+  "typeId": 42074253,
   "table": {
     "rows": [
       {
-        "name": "synthesize",
+        "name": "Corporate",
         "columns": [
           {
-            "typeId": 64084742,
-            "isLocked": false
-          },
-          {
-            "typeId": 65114892,
-            "isLocked": false
-          },
-          {
-            "typeId": 41211819,
-            "isLocked": false
-          },
-          {
-            "typeId": 93018305,
-            "isLocked": true
-          },
-          {
-            "typeId": 92629988,
-            "isLocked": true
-          }
-        ]
-      },
-      {
-        "name": "Baby",
-        "columns": [
-          {
-            "typeId": 33005806,
-            "isLocked": true
-          },
-          {
-            "typeId": 31064013,
-            "isLocked": true
-          },
-          {
-            "typeId": 68101442,
-            "isLocked": false
-          },
-          {
-            "typeId": 75998488,
-            "isLocked": true
-          }
-        ]
-      },
-      {
-        "name": "aggregate",
-        "columns": [
-          {
-            "typeId": 27163361,
-            "isLocked": false
-          },
-          {
-            "typeId": 89380799,
-            "isLocked": true
-          },
-          {
-            "typeId": 42919224,
-            "isLocked": true
-          },
-          {
-            "typeId": 16800207,
-            "isLocked": false
-          },
-          {
-            "typeId": 10930712,
-            "isLocked": true
-          }
-        ]
-      },
-      {
-        "name": "Manager",
-        "columns": [
-          {
-            "typeId": 97810061,
-            "isLocked": true
-          },
-          {
-            "typeId": 22127334,
-            "isLocked": true
-          },
-          {
-            "typeId": 93612699,
-            "isLocked": true
-          },
-          {
-            "typeId": 42498395,
+            "typeId": 47361739,
             "isLocked": true
           }
         ]
@@ -98,20 +15,8 @@
     ],
     "columns": [
       {
-        "name": "Fantastic Wooden Shoes",
-        "typeId": 56440594
-      },
-      {
-        "name": "Sleek Concrete Ball",
-        "typeId": 75124343
-      },
-      {
-        "name": "e-tailers",
-        "typeId": 44101929
-      },
-      {
-        "name": "Avon",
-        "typeId": 96644224
+        "name": "Borders",
+        "typeId": 94556967
       }
     ]
   }

@@ -1,28 +1,16 @@
 {
-  "name": "Fresh",
-  "ownerId": 9586932,
-  "substituteDocumentId": 91540179,
+  "name": "parse",
+  "ownerId": 33862185,
+  "substituteDocumentId": 17394402,
   "attributeValues": [
     {
-      "id": 95025796,
-      "value": "interface"
+      "id": 25084189,
+      "value": "plum"
     },
     {
-      "id": 49710576,
-      "value": "SAS"
-    },
-    {
-      "id": 25834893,
-      "value": "HTTP"
-    },
-    {
-      "id": 36087457,
-      "value": "Divide"
-    },
-    {
-      "id": 88844753,
-      "value": "Open-source"
+      "id": 99801005,
+      "value": "Producer"
     }
   ],
-  "templateId": 13824904
+  "templateId": 16455718
 }

@@ -1,0 +1,24 @@
+#%RAML 1.0 DataType
+
+type: object
+properties:
+  rows:
+    type: array
+    items:
+      type: object
+      properties:
+        name: string
+        columns:
+          type: array
+          items:
+            type: object
+            properties:
+              isLocked: boolean
+              type: !include type.raml
+  columns:
+    type: array
+    items:
+      type: object
+      properties:
+        name: string
+        type: !include type.raml

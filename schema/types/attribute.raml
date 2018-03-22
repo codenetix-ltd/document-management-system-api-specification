@@ -6,28 +6,8 @@ properties:
   type:
     type: !include type.raml
   name: string
-  table:
-    type: object
-    properties:
-      rows:
-        type: array
-        items:
-          type: object
-          properties:
-            name: string
-            columns:
-              type: array
-              items:
-                type: object
-                properties:
-                  isLocked: boolean
-                  type: !include type.raml
-      columns:
-        type: array
-        items:
-          type: object
-          properties:
-            name: string
-            type: !include type.raml
+  data:
+    type: !include table.raml
+
 
 example: !include ../examples/Attribute.json

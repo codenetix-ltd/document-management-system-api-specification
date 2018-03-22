@@ -1,19 +1,15 @@
 {
-  "name": "Specialist",
-  "ownerId": 71609673,
-  "substituteDocumentId": 47156632,
+  "name": "Chair",
+  "ownerId": 69647812,
+  "substituteDocumentId": 99668854,
   "attributeValues": [
     {
-      "id": 66262184,
-      "value": "compress"
+      "id": 64317477,
+      "value": "JBOD"
     },
     {
-      "id": 60669340,
-      "value": "Frozen"
-    },
-    {
-      "id": 14168504,
-      "value": "Credit Card Account"
+      "id": 39538938,
+      "value": "infrastructures"
     }
   ]
 }
