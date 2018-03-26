@@ -1,17 +1,27 @@
 [
   {
-    "id": 31165762,
-    "name": "SCSI",
-    "machineName": "fuchsia"
+    "id": 1,
+    "name": "Boolean",
+    "machineName": "boolean"
   },
   {
-    "id": 77675935,
-    "name": "Arizona",
-    "machineName": "Configuration"
+    "id": 2,
+    "name": "Value with deviations",
+    "machineName": "valueWithDeviations"
   },
   {
-    "id": 20292880,
-    "name": "deliverables",
-    "machineName": "purple"
+    "id": 3,
+    "name": "String",
+    "machineName": "string"
+  },
+  {
+    "id": 4,
+    "name": "Numeric",
+    "machineName": "numeric"
+  },
+  {
+    "id": 5,
+    "name": "Table",
+    "machineName": "table"
   }
 ]

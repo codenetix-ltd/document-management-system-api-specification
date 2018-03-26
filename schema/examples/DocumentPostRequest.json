@@ -1,16 +1,12 @@
 {
-  "name": "parse",
-  "ownerId": 33862185,
-  "substituteDocumentId": 17394402,
+  "name": "infomediaries",
+  "ownerId": 83444711,
+  "substituteDocumentId": 82223442,
   "attributeValues": [
     {
-      "id": 25084189,
-      "value": "plum"
-    },
-    {
-      "id": 99801005,
-      "value": "Producer"
+      "id": 27969965,
+      "value": "schemas"
     }
   ],
-  "templateId": 16455718
+  "templateId": 15647564
 }

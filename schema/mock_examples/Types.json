@@ -1,1 +1,27 @@
-[{"id":2799911,"name":"Ball","machineName":"FTP"},{"id":13914544,"name":"Licensed","machineName":"Tanzanian Shilling"},{"id":46465258,"name":"Borders","machineName":"array"},{"id":66291346,"name":"HDD","machineName":"XSS"},{"id":50247362,"name":"Metrics","machineName":"Monitored"},{"id":79572902,"name":"Money Market Account","machineName":"Massachusetts"},{"id":93791752,"name":"EXE","machineName":"synthesizing"},{"id":72492631,"name":"Stream","machineName":"Bedfordshire"},{"id":31822898,"name":"teal","machineName":"clicks-and-mortar"},{"id":22408977,"name":"Rubber","machineName":"Granite"},{"id":18750915,"name":"Refined Wooden Fish","machineName":"applications"},{"id":49532461,"name":"invoice","machineName":"lime"},{"id":83351480,"name":"Danish Krone","machineName":"experiences"},{"id":74676542,"name":"Louisiana","machineName":"parse"},{"id":99317266,"name":"copying","machineName":"payment"},{"id":65501343,"name":"compressing","machineName":"orange"},{"id":70462790,"name":"Plastic","machineName":"copy"},{"id":29389046,"name":"SQL","machineName":"client-server"},{"id":9328171,"name":"Unions","machineName":"bluetooth"},{"id":26112468,"name":"Dynamic","machineName":"Mouse"}]
+[
+  {
+    "id": 1,
+    "name": "Boolean",
+    "machineName": "boolean"
+  },
+  {
+    "id": 2,
+    "name": "Value with deviations",
+    "machineName": "valueWithDeviations"
+  },
+  {
+    "id": 3,
+    "name": "String",
+    "machineName": "string"
+  },
+  {
+    "id": 4,
+    "name": "Numeric",
+    "machineName": "numeric"
+  },
+  {
+    "id": 5,
+    "name": "Table",
+    "machineName": "table"
+  }
+]

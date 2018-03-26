@@ -1,15 +1,15 @@
 {
-  "name": "Chair",
-  "ownerId": 69647812,
-  "substituteDocumentId": 99668854,
+  "name": "attitude-oriented",
+  "ownerId": 19974442,
+  "substituteDocumentId": 95831163,
   "attributeValues": [
     {
-      "id": 64317477,
-      "value": "JBOD"
+      "id": 30348825,
+      "value": "Practical Metal Pizza"
     },
     {
-      "id": 39538938,
-      "value": "infrastructures"
+      "id": 5664252,
+      "value": "auxiliary"
     }
   ]
 }

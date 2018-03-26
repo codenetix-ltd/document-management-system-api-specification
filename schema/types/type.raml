@@ -3,6 +3,10 @@
 type: object
 properties:
   id: integer
-  name: string
-  machineName: string
+  name:
+    type: string
+    enum: ['String', 'Numeric', 'Boolean', 'Table', 'Value with deviations']
+  machineName:
+    type: string
+    enum: ['string', 'numeric', 'boolean', 'table', 'valueWithDeviations']
 example: !include ../examples/Type.json

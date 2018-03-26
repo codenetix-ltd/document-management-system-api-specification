@@ -1,22 +1,26 @@
 {
-  "name": "USB",
-  "typeId": 42074253,
+  "name": "AI",
+  "typeId": 20666287,
   "table": {
     "rows": [
       {
-        "name": "Corporate",
+        "name": "zero defect",
         "columns": [
           {
-            "typeId": 47361739,
-            "isLocked": true
+            "typeId": 28404938,
+            "isLocked": false
           }
         ]
       }
     ],
     "columns": [
       {
-        "name": "Borders",
-        "typeId": 94556967
+        "name": "Music",
+        "typeId": 63991392
+      },
+      {
+        "name": "Haven",
+        "typeId": 71082507
       }
     ]
   }
