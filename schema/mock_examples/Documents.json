@@ -1,73 +1,51 @@
 [
   {
-    "id": 56012810,
-    "name": "Unbranded Granite Shoes",
-    "ownerId": 15168878,
-    "substituteDocumentId": 26357285,
-    "attributeValues": [
-      {
-        "id": 50907327,
-        "value": "B2C"
-      },
-      {
-        "id": 64209659,
-        "value": "Denmark"
-      }
-    ],
-    "templateId": 55134505,
-    "createdAt": 88406738,
-    "updatedAt": 2147535,
-    "labelId": 96147028,
-    "label": {
-      "name": "withdrawal"
-    },
-    "owner": {
-      "id": 12357955,
-      "fullName": "compress",
-      "email": "Darrion_OConnell@yahoo.com",
-      "templatesIds": [
-        64175787,
-        9364244
-      ]
-    },
+    "updatedAt": 54133883,
+    "ownerId": 77815229,
+    "name": "Example document",
+    "createdAt": 88572716,
     "template": {
-      "id": 56546950,
-      "name": "back-end",
+      "id": 1234500,
+      "name": "Example template",
       "attributes": [
         {
-          "id": 60314185,
+          "id": 1234501,
+          "type": {
+            "id": 3,
+            "name": "String",
+            "machineName": "string"
+          },
+          "name": "Example attribute 1"
+        },
+        {
+          "id": 1234502,
           "type": {
             "id": 5,
             "name": "Table",
             "machineName": "table"
           },
-          "name": "Locks",
+          "name": "Example attribute 2",
           "data": {
             "rows": [
               {
-                "name": "SAS",
+                "name": "Common",
                 "columns": [
                   {
-                    "id": 78806076,
+                    "id": 1234503,
                     "isLocked": true,
                     "type": {
-                      "id": 2,
-                      "name": "Value with deviations",
-                      "machineName": "valueWithDeviations"
+                      "id": 3,
+                      "name": "String",
+                      "machineName": "string"
                     }
-                  }
-                ]
-              },
-              {
-                "name": "lime",
-                "columns": [
+                  },
                   {
-                    "id": 19156281,
-                    "isLocked": true,
+                    "id": 1234504,
+                    "isLocked": false,
                     "type": {
-                      "id": 1,
-                      "name": "Boolean",
-                      "machineName": "boolean"
+                      "id": 4,
+                      "name": "Numeric",
+                      "machineName": "numeric"
                     }
                   }
                 ]
@@ -75,15 +53,15 @@
             ],
             "columns": [
               {
-                "name": "Gorgeous",
+                "name": "Column title 1",
                 "type": {
-                  "id": 5,
-                  "name": "Table",
-                  "machineName": "table"
+                  "id": 3,
+                  "name": "String",
+                  "machineName": "string"
                 }
               },
               {
-                "name": "paradigms",
+                "name": "Column title 2",
                 "type": {
                   "id": 4,
                   "name": "Numeric",
@@ -95,8 +73,41 @@
         }
       ]
     },
-    "version": 93390897,
-    "comment": "copying"
+    "attributeValues": [
+      {
+        "id": 1234501,
+        "value": "Example attribute value"
+      },
+      {
+        "id": 1234502,
+        "value": "Empty value"
+      },
+      {
+        "id": 1234503,
+        "value": "Cell value 1"
+      },
+      {
+        "id": 1234504,
+        "value": 100
+      }
+    ],
+    "labelId": 74100572,
+    "label": {
+      "name": "networks"
+    },
+    "id": 89688512,
+    "comment": "Lorem ipsum dolor sit amet.",
+    "substituteDocumentId": 40114552,
+    "templateId": 61747750,
+    "version": 1,
+    "owner": {
+      "id": 95877757,
+      "fullName": "Granite",
+      "email": "Eldon97@gmail.com",
+      "templatesIds": [
+        1234500
+      ]
+    }
   },
   {
     "id": 32672913,

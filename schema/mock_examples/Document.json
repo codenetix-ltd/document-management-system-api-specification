@@ -1,91 +1,50 @@
 {
-  "id": 96989765,
-  "name": "Accounts",
-  "ownerId": 34391134,
-  "substituteDocumentId": 18619474,
-  "attributeValues": [
-    {
-      "id": 3377786,
-      "value": "hard drive"
-    }
-  ],
-  "templateId": 20966753,
-  "createdAt": 53877457,
-  "updatedAt": 49412292,
-  "labelId": 94346774,
-  "label": {
-    "name": "payment"
-  },
-  "owner": {
-    "id": 92341166,
-    "fullName": "Cocos (Keeling) Islands",
-    "email": "Hattie_Becker29@yahoo.com",
-    "templatesIds": [
-      8858523,
-      86788513
-    ]
-  },
+  "updatedAt": 54133883,
+  "ownerId": 77815229,
+  "name": "Example document",
+  "createdAt": 88572716,
   "template": {
-    "id": 2792936,
-    "name": "Gorgeous Metal Chicken",
+    "id": 1234500,
+    "name": "Example template",
     "attributes": [
       {
-        "id": 94711477,
-        "type": {
-          "id": 5,
-          "name": "Table",
-          "machineName": "table"
-        },
-        "name": "Automotive",
-        "data": {
-          "rows": [
-            {
-              "name": "monitoring",
-              "columns": [
-                {
-                  "id": 39904319,
-                  "isLocked": false,
-                  "type": {
-                    "id": 1,
-                    "name": "Boolean",
-                    "machineName": "boolean"
-                  }
-                }
-              ]
-            }
-          ],
-          "columns": [
-            {
-              "name": "Tactics",
-              "type": {
-                "id": 3,
-                "name": "String",
-                "machineName": "string"
-              }
-            }
-          ]
-        }
-      },
-      {
-        "id": 71689397,
+        "id": 1234501,
         "type": {
           "id": 3,
           "name": "String",
           "machineName": "string"
         },
-        "name": "Fantastic",
+        "name": "Example attribute 1"
+      },
+      {
+        "id": 1234502,
+        "type": {
+          "id": 5,
+          "name": "Table",
+          "machineName": "table"
+        },
+        "name": "Example attribute 2",
         "data": {
           "rows": [
             {
-              "name": "maroon",
+              "name": "Common",
               "columns": [
                 {
-                  "id": 18884874,
+                  "id": 1234503,
                   "isLocked": true,
                   "type": {
-                    "id": 5,
-                    "name": "Table",
-                    "machineName": "table"
+                    "id": 3,
+                    "name": "String",
+                    "machineName": "string"
+                  }
+                },
+                {
+                  "id": 1234504,
+                  "isLocked": false,
+                  "type": {
+                    "id": 4,
+                    "name": "Numeric",
+                    "machineName": "numeric"
                   }
                 }
               ]
@@ -93,19 +52,19 @@
           ],
           "columns": [
             {
-              "name": "system",
+              "name": "Column title 1",
               "type": {
-                "id": 1,
-                "name": "Boolean",
-                "machineName": "boolean"
+                "id": 3,
+                "name": "String",
+                "machineName": "string"
               }
             },
             {
-              "name": "contextually-based",
+              "name": "Column title 2",
               "type": {
-                "id": 5,
-                "name": "Table",
-                "machineName": "table"
+                "id": 4,
+                "name": "Numeric",
+                "machineName": "numeric"
               }
             }
           ]
@@ -113,6 +72,39 @@
       }
     ]
   },
-  "version": 35762379,
-  "comment": "copying"
+  "attributeValues": [
+    {
+      "id": 1234501,
+      "value": "Example attribute value"
+    },
+    {
+      "id": 1234502,
+      "value": "Empty value"
+    },
+    {
+      "id": 1234503,
+      "value": "Cell value 1"
+    },
+    {
+      "id": 1234504,
+      "value": 100
+    }
+  ],
+  "labelId": 74100572,
+  "label": {
+    "name": "networks"
+  },
+  "id": 89688512,
+  "comment": "Lorem ipsum dolor sit amet.",
+  "substituteDocumentId": 40114552,
+  "templateId": 61747750,
+  "version": 1,
+  "owner": {
+    "id": 95877757,
+    "fullName": "Granite",
+    "email": "Eldon97@gmail.com",
+    "templatesIds": [
+      1234500
+    ]
+  }
 }
