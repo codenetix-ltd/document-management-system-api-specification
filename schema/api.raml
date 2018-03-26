@@ -16,6 +16,7 @@ types:
   DocumentPutRequest: !include requestTypes/documentPut.raml
 resourceTypes:
   PaginateCollection: !include ./resourceTypes/paginateCollection.raml
+  Collection: !include ./resourceTypes/collection.raml
   Item: !include ./resourceTypes/item.raml
 
 /users:
@@ -83,3 +84,9 @@ resourceTypes:
       Item:
         responseItem: Document
         putRequestItem: DocumentPutRequest
+
+/types:
+  type:
+    Collection:
+      responseItem: Type
+      examplesJson: !include examples/Types.json
