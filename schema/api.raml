@@ -14,6 +14,8 @@ types:
   Document: !include types/document.raml
   DocumentPostRequest: !include requestTypes/document.raml
   DocumentPutRequest: !include requestTypes/documentPut.raml
+  Label: !include types/label.raml
+  LabelRequest: !include requestTypes/label.raml
 resourceTypes:
   PaginateCollection: !include ./resourceTypes/paginateCollection.raml
   Collection: !include ./resourceTypes/collection.raml
@@ -90,3 +92,20 @@ resourceTypes:
     Collection:
       responseItem: Type
       examplesJson: !include examples/Types.json
+
+/labels:
+  type:
+    PaginateCollection:
+      responseItem: Label
+      postRequestItem: LabelRequest
+      examplesJson: !include examples/Labels.json
+  /{id}:
+    uriParameters:
+      id:
+        type: integer
+        example: 1
+        default: 1
+    type:
+      Item:
+        responseItem: Label
+        putRequestItem: LabelRequest

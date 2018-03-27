@@ -16,8 +16,12 @@ properties:
   templateId: integer
   createdAt: integer
   updatedAt: integer
-  labelId: integer
-  label: !include label.raml
+  labelIds:
+    type: array
+    items: integer
+  labels:
+   type: array
+   items: !include label.raml
   owner: !include user.raml
   template: !include template.raml
   version: integer

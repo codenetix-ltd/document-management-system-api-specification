@@ -90,10 +90,15 @@
       "value": 100
     }
   ],
-  "labelId": 74100572,
-  "label": {
-    "name": "networks"
-  },
+  "labelIds": [
+    74100572
+  ],
+  "labels": [
+    {
+      "id": 1,
+      "name": "Example label"
+    }
+  ],
   "id": 89688512,
   "comment": "Lorem ipsum dolor sit amet.",
   "substituteDocumentId": 40114552,

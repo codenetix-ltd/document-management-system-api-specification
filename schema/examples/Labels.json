@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "name": "Boolean"
+  },
+  {
+    "id": 2,
+    "name": "Value with deviations"
+  },
+  {
+    "id": 3,
+    "name": "String"
+  },
+  {
+    "id": 4,
+    "name": "Numeric"
+  },
+  {
+    "id": 5,
+    "name": "Table"
+  }
+]

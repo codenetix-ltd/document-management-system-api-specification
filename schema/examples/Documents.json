@@ -91,10 +91,15 @@
         "value": 100
       }
     ],
-    "labelId": 74100572,
-    "label": {
-      "name": "networks"
-    },
+    "labelIds": [
+      74100572
+    ],
+    "labels": [
+      {
+        "id": 1,
+        "name": "networks"
+      }
+    ],
     "id": 89688512,
     "comment": "Lorem ipsum dolor sit amet.",
     "substituteDocumentId": 40114552,
@@ -127,10 +132,15 @@
     "templateId": 20690753,
     "createdAt": 80842910,
     "updatedAt": 24857210,
-    "labelId": 17598515,
-    "label": {
-      "name": "transmit"
-    },
+    "labelIds": [
+      74100572
+    ],
+    "labels": [
+      {
+        "id": 1,
+        "name": "networks"
+      }
+    ],
     "owner": {
       "id": 98067917,
       "fullName": "integrated",
@@ -203,10 +213,15 @@
     "templateId": 60991039,
     "createdAt": 65132786,
     "updatedAt": 68075334,
-    "labelId": 6953455,
-    "label": {
-      "name": "Liaison"
-    },
+    "labelIds": [
+      74100572
+    ],
+    "labels": [
+      {
+        "id": 1,
+        "name": "networks"
+      }
+    ],
     "owner": {
       "id": 61163970,
       "fullName": "Gorgeous Metal Chips",
