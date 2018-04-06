@@ -87,6 +87,22 @@ resourceTypes:
         responseItem: Document
         putRequestItem: DocumentPutRequest
 
+/documents/{id}/versions:
+  type:
+    PaginateCollection:
+      responseItem: DocumentVersion
+      examplesJson: !include examples/Documents.json
+  /{id}:
+    uriParameters:
+      id:
+        type: integer
+        example: 1
+        default: 1
+    type:
+      Item:
+        responseItem: Document
+        putRequestItem: DocumentPutRequest
+
 /types:
   type:
     Collection:

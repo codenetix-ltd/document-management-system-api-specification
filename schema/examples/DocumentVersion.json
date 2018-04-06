@@ -1,20 +1,4 @@
 {
-  "id": 1234500,
-  "ownerId": 77815229,
-  "name": "Example document",
-  "substituteDocumentId": 40114552,
-  "createdAt": 88572716,
-  "updatedAt": 54133883,
-  "owner": {
-    "id": 95877757,
-    "fullName": "Granite",
-    "email": "Eldon97@gmail.com",
-    "templatesIds": [
-      1234500
-    ]
-  },
-  "version": 22,
-  "actualVersion": {
     "id": 22,
     "ownerId": 77815229,
     "templateId": 1234500,
@@ -117,5 +101,4 @@
     "comment": "Lorem ipsum dolor sit amet.",
     "createdAt": 88572716,
     "updatedAt": 54133883
-  }
 }
