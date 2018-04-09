@@ -3,13 +3,12 @@
 type: object
 properties:
   id: integer
-  name: string
   ownerId: integer
   substituteDocumentId: integer
-  createdAt: integer
-  updatedAt: integer
+  actualVersion: !include documentVersion.raml
   owner: !include user.raml
   version: integer
-  actualVersion: !include documentVersion.raml
+  createdAt: integer
+  updatedAt: integer
 
 example: !include ../examples/Document.json

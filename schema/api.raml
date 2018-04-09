@@ -16,6 +16,9 @@ types:
   DocumentPutRequest: !include requestTypes/documentPut.raml
   Label: !include types/label.raml
   LabelRequest: !include requestTypes/label.raml
+
+  DocumentVersion: !include types/documentVersion.raml
+  DocumentVersionRequest: !include requestTypes/documentVersion.raml
 resourceTypes:
   PaginateCollection: !include ./resourceTypes/paginateCollection.raml
   Collection: !include ./resourceTypes/collection.raml
@@ -91,7 +94,8 @@ resourceTypes:
   type:
     PaginateCollection:
       responseItem: DocumentVersion
-      examplesJson: !include examples/Documents.json
+      postRequestItem: DocumentVersionRequest
+      examplesJson: !include examples/DocumentVersions.json
   /{id}:
     uriParameters:
       id:
@@ -100,8 +104,8 @@ resourceTypes:
         default: 1
     type:
       Item:
-        responseItem: Document
-        putRequestItem: DocumentPutRequest
+        responseItem: DocumentVersion
+        putRequestItem: DocumentVersionRequest
 
 /types:
   type:

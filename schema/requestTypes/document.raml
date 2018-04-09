@@ -2,16 +2,8 @@
 type: object
 
 properties:
-  name: string
   ownerId: integer
   substituteDocumentId: integer
-  attributeValues:
-    type: array
-    items:
-      type: object
-      properties:
-        id: integer
-        value: string
-  templateId: integer
+  actualVersion: !include documentVersion.raml
 
 example: !include ../examples/DocumentPostRequest.json

@@ -1,10 +1,7 @@
 {
   "id": 1234500,
   "ownerId": 77815229,
-  "name": "Example document",
   "substituteDocumentId": 40114552,
-  "createdAt": 88572716,
-  "updatedAt": 54133883,
   "owner": {
     "id": 95877757,
     "fullName": "Granite",
@@ -16,7 +13,7 @@
   "version": 22,
   "actualVersion": {
     "id": 22,
-    "ownerId": 77815229,
+    "name": "Example document",
     "templateId": 1234500,
     "template": {
       "id": 1234500,
@@ -87,6 +84,16 @@
         }
       ]
     },
+    "labelIds": [
+      74100572
+    ],
+    "labels": [
+      {
+        "id": 74100572,
+        "name": "Example label"
+      }
+    ],
+    "comment": "Lorem ipsum dolor sit amet.",
     "attributeValues": [
       {
         "id": 1234501,
@@ -105,17 +112,9 @@
         "value": 100
       }
     ],
-    "labelIds": [
-      74100572
-    ],
-    "labels": [
-      {
-        "id": 1,
-        "name": "Example label"
-      }
-    ],
-    "comment": "Lorem ipsum dolor sit amet.",
     "createdAt": 88572716,
     "updatedAt": 54133883
-  }
+  },
+  "createdAt": 88572716,
+  "updatedAt": 54133883
 }

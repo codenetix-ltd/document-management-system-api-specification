@@ -1,0 +1,26 @@
+{
+  "name": "Example document",
+  "templateId": 1234500,
+  "labelIds": [
+    74100572
+  ],
+  "comment": "Lorem ipsum dolor sit amet.",
+  "attributeValues": [
+    {
+      "id": 1234501,
+      "value": "Example attribute value"
+    },
+    {
+      "id": 1234502,
+      "value": "Empty value"
+    },
+    {
+      "id": 1234503,
+      "value": "Cell value 1"
+    },
+    {
+      "id": 1234504,
+      "value": 100
+    }
+  ]
+}
