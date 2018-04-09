@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "name": "admin",
+    "createdAt": 88572716,
+    "updatedAt": 54133883
+  },
+  {
+    "id": 2,
+    "name": "user",
+    "createdAt": 88572716,
+    "updatedAt": 54133883
+  },
+  {
+    "id": 3,
+    "name": "simple",
+    "createdAt": 88572716,
+    "updatedAt": 54133883
+  }
+]

@@ -19,6 +19,9 @@ types:
 
   DocumentVersion: !include types/documentVersion.raml
   DocumentVersionRequest: !include requestTypes/documentVersion.raml
+
+  Role: !include types/role.raml
+  RoleRequest: !include requestTypes/role.raml
 resourceTypes:
   PaginateCollection: !include ./resourceTypes/paginateCollection.raml
   Collection: !include ./resourceTypes/collection.raml
@@ -129,3 +132,20 @@ resourceTypes:
       Item:
         responseItem: Label
         putRequestItem: LabelRequest
+
+/roles:
+  type:
+    PaginateCollection:
+      responseItem: Role
+      postRequestItem: RoleRequest
+      examplesJson: !include examples/Roles.json
+  /{id}:
+    uriParameters:
+      id:
+        type: integer
+        example: 1
+        default: 1
+    type:
+      Item:
+        responseItem: Role
+        putRequestItem: RoleRequest
