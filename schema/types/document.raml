@@ -3,28 +3,12 @@
 type: object
 properties:
   id: integer
-  name: string
   ownerId: integer
   substituteDocumentId: integer
-  attributeValues:
-    type: array
-    items:
-      type: object
-      properties:
-        id: integer
-        value: string | integer | boolean
-  templateId: integer
+  actualVersion: !include documentVersion.raml
+  owner: !include user.raml
+  version: integer
   createdAt: integer
   updatedAt: integer
-  labelIds:
-    type: array
-    items: integer
-  labels:
-   type: array
-   items: !include label.raml
-  owner: !include user.raml
-  template: !include template.raml
-  version: integer
-  comment: string
 
 example: !include ../examples/Document.json

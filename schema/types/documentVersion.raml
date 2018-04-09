@@ -1,0 +1,26 @@
+#%RAML 1.0 DataType
+
+type: object
+properties:
+  id: integer
+  name: string
+  templateId: integer
+  template: !include template.raml
+  labelIds:
+    type: array
+    items: integer
+  labels:
+   type: array
+   items: !include label.raml
+  comment: string
+  attributeValues:
+    type: array
+    items:
+      type: object
+      properties:
+        id: integer
+        value: string | integer | boolean
+  createdAt: integer
+  updatedAt: integer
+
+example: !include ../examples/DocumentVersion.json

@@ -1,109 +1,7 @@
 {
-  "updatedAt": 54133883,
+  "id": 1234500,
   "ownerId": 77815229,
-  "name": "Example document",
-  "createdAt": 88572716,
-  "template": {
-    "id": 1234500,
-    "name": "Example template",
-    "attributes": [
-      {
-        "id": 1234501,
-        "type": {
-          "id": 3,
-          "name": "String",
-          "machineName": "string"
-        },
-        "name": "Example attribute 1"
-      },
-      {
-        "id": 1234502,
-        "type": {
-          "id": 5,
-          "name": "Table",
-          "machineName": "table"
-        },
-        "name": "Example attribute 2",
-        "data": {
-          "rows": [
-            {
-              "name": "Common",
-              "columns": [
-                {
-                  "id": 1234503,
-                  "isLocked": true,
-                  "type": {
-                    "id": 3,
-                    "name": "String",
-                    "machineName": "string"
-                  }
-                },
-                {
-                  "id": 1234504,
-                  "isLocked": false,
-                  "type": {
-                    "id": 4,
-                    "name": "Numeric",
-                    "machineName": "numeric"
-                  }
-                }
-              ]
-            }
-          ],
-          "columns": [
-            {
-              "name": "Column title 1",
-              "type": {
-                "id": 3,
-                "name": "String",
-                "machineName": "string"
-              }
-            },
-            {
-              "name": "Column title 2",
-              "type": {
-                "id": 4,
-                "name": "Numeric",
-                "machineName": "numeric"
-              }
-            }
-          ]
-        }
-      }
-    ]
-  },
-  "attributeValues": [
-    {
-      "id": 1234501,
-      "value": "Example attribute value"
-    },
-    {
-      "id": 1234502,
-      "value": "Empty value"
-    },
-    {
-      "id": 1234503,
-      "value": "Cell value 1"
-    },
-    {
-      "id": 1234504,
-      "value": 100
-    }
-  ],
-  "labelIds": [
-    74100572
-  ],
-  "labels": [
-    {
-      "id": 1,
-      "name": "Example label"
-    }
-  ],
-  "id": 89688512,
-  "comment": "Lorem ipsum dolor sit amet.",
   "substituteDocumentId": 40114552,
-  "templateId": 61747750,
-  "version": 1,
   "owner": {
     "id": 95877757,
     "fullName": "Granite",
@@ -111,5 +9,112 @@
     "templatesIds": [
       1234500
     ]
-  }
+  },
+  "version": 22,
+  "actualVersion": {
+    "id": 22,
+    "name": "Example document",
+    "templateId": 1234500,
+    "template": {
+      "id": 1234500,
+      "name": "Example template",
+      "attributes": [
+        {
+          "id": 1234501,
+          "type": {
+            "id": 3,
+            "name": "String",
+            "machineName": "string"
+          },
+          "name": "Example attribute 1"
+        },
+        {
+          "id": 1234502,
+          "type": {
+            "id": 5,
+            "name": "Table",
+            "machineName": "table"
+          },
+          "name": "Example attribute 2",
+          "data": {
+            "rows": [
+              {
+                "name": "Common",
+                "columns": [
+                  {
+                    "id": 1234503,
+                    "isLocked": true,
+                    "type": {
+                      "id": 3,
+                      "name": "String",
+                      "machineName": "string"
+                    }
+                  },
+                  {
+                    "id": 1234504,
+                    "isLocked": false,
+                    "type": {
+                      "id": 4,
+                      "name": "Numeric",
+                      "machineName": "numeric"
+                    }
+                  }
+                ]
+              }
+            ],
+            "columns": [
+              {
+                "name": "Column title 1",
+                "type": {
+                  "id": 3,
+                  "name": "String",
+                  "machineName": "string"
+                }
+              },
+              {
+                "name": "Column title 2",
+                "type": {
+                  "id": 4,
+                  "name": "Numeric",
+                  "machineName": "numeric"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "labelIds": [
+      74100572
+    ],
+    "labels": [
+      {
+        "id": 74100572,
+        "name": "Example label"
+      }
+    ],
+    "comment": "Lorem ipsum dolor sit amet.",
+    "attributeValues": [
+      {
+        "id": 1234501,
+        "value": "Example attribute value"
+      },
+      {
+        "id": 1234502,
+        "value": "Empty value"
+      },
+      {
+        "id": 1234503,
+        "value": "Cell value 1"
+      },
+      {
+        "id": 1234504,
+        "value": 100
+      }
+    ],
+    "createdAt": 88572716,
+    "updatedAt": 54133883
+  },
+  "createdAt": 88572716,
+  "updatedAt": 54133883
 }
