@@ -43,7 +43,7 @@ mock.setExampleProvider(function(body, req){
     return example
 })
 
-mock.loadFile('./api_mock.raml', options)
+mock.loadFile('./api.raml', options)
     .then(function (app) {
         let router = new Router()
         router.use(app)
