@@ -33,7 +33,7 @@ const originSchemaDir = '/schema';
 
 async function handleType(ramlData, typeName) {
     const [origin, obj] = await Promise.all([loadOrigin(typeName), generateObject(ramlData, typeName)]);
-    const newObj = deepAssign(obj,origin);
+    const newObj = origin ? deepAssign(obj,origin) : obj;
 
     if(!isEqual(origin, newObj)) {
         console.log('Type ' + typeName + ' was changed!');
@@ -44,12 +44,17 @@ async function handleType(ramlData, typeName) {
 async function handleArrayType(ramlData, typeName, count) {
     const [origin, obj] = await Promise.all([loadOrigin(typeName+'s'), generateObject(ramlData, typeName, count)]);
 
-    const newCount = Math.max(count, origin.length);
+    const newCount = Math.max(count, origin ? origin.length : 0);
 
     let newArr = [];
-    for(let i=0;i<newCount;++i) {
-        let newObj = Object.assign({}, deepAssign(obj[i % obj.length], origin[i % origin.length]));
-        newArr.push(newObj);
+
+    if(origin) {
+        for (let i = 0; i < newCount; ++i) {
+            let newObj = Object.assign({}, deepAssign(obj[i % obj.length], origin[i % origin.length]));
+            newArr.push(newObj);
+        }
+    } else {
+        newArr = obj;
     }
 
     if(!isEqual(origin, newArr)) {
@@ -80,7 +85,7 @@ async function loadOrigin(typeName) {
     if (await isExistFile(filePath)) {
         return JSON.parse(await readFile(filePath));
     }
-    return {};
+    return null;
 }
 
 function raml2schema(ramlData, typeName) {

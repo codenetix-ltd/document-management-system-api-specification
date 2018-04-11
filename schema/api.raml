@@ -16,6 +16,8 @@ types:
   DocumentPutRequest: !include requestTypes/documentPut.raml
   Label: !include types/label.raml
   LabelRequest: !include requestTypes/label.raml
+  AuthRequest: !include requestTypes/auth.raml
+  Auth: !include types/auth.raml
 
   DocumentVersion: !include types/documentVersion.raml
   DocumentVersionRequest: !include requestTypes/documentVersion.raml
@@ -149,3 +151,16 @@ resourceTypes:
       Item:
         responseItem: Role
         putRequestItem: RoleRequest
+
+/oauth/token:
+  post:
+    body:
+      application/json:
+        type: AuthRequest
+    responses:
+      200:
+        description:
+          Success Auth
+        body:
+          application/json:
+            Auth

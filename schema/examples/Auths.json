@@ -1,0 +1,20 @@
+[
+  {
+    "tokenType": "Bearer",
+    "expiresIn": 26932465,
+    "accessToken": "Palladium",
+    "refreshToken": "invoice"
+  },
+  {
+    "tokenType": "Bearer",
+    "expiresIn": 85066087,
+    "accessToken": "Legacy",
+    "refreshToken": "challenge"
+  },
+  {
+    "tokenType": "Bearer",
+    "expiresIn": 19616906,
+    "accessToken": "harness",
+    "refreshToken": "Points"
+  }
+]
