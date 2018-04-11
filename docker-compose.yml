@@ -10,3 +10,13 @@ services:
       - ./schema:/raml/src
     ports:
       - "80:80"
+
+  generator:
+    build:
+      context: ./
+      dockerfile: ./generator/Dockerfile
+    image: dms_generator
+    container_name: dms_generator
+    volumes:
+      - ./schema:/schema
+      - ./schema/examples:/out
