@@ -9,6 +9,23 @@
           {
             "typeId": 28404938,
             "isLocked": false
+          },
+          {
+            "typeId": 28951514,
+            "isLocked": true
+          }
+        ]
+      },
+      {
+        "name": "monitoring",
+        "columns": [
+          {
+            "typeId": 31392272,
+            "isLocked": true
+          },
+          {
+            "typeId": 34994439,
+            "isLocked": true
           }
         ]
       }

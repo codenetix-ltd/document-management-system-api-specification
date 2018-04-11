@@ -2,7 +2,8 @@
   "name": "Example document",
   "templateId": 1234500,
   "labelIds": [
-    74100572
+    74100572,
+    32871570
   ],
   "comment": "Lorem ipsum dolor sit amet.",
   "attributeValues": [

@@ -3,15 +3,6 @@
     "id": 1,
     "ownerId": 77815229,
     "substituteDocumentId": 40114552,
-    "owner": {
-      "id": 95877757,
-      "fullName": "Granite",
-      "email": "Eldon97@gmail.com",
-      "templatesIds": [
-        1234500
-      ]
-    },
-    "version": 1,
     "actualVersion": {
       "id": 1,
       "name": "Example document",
@@ -86,12 +77,21 @@
         ]
       },
       "labelIds": [
-        74100572
+        74100572,
+        11945249
       ],
       "labels": [
         {
           "id": 74100572,
-          "name": "Example label"
+          "name": "Example label",
+          "createdAt": 11961464,
+          "updatedAt": 493046
+        },
+        {
+          "id": 90779209,
+          "name": "Assistant",
+          "createdAt": 46859637,
+          "updatedAt": 33807573
         }
       ],
       "comment": "Lorem ipsum dolor sit amet.",
@@ -116,6 +116,16 @@
       "createdAt": 88572716,
       "updatedAt": 54133883
     },
+    "owner": {
+      "id": 95877757,
+      "fullName": "Granite",
+      "email": "Eldon97@gmail.com",
+      "templatesIds": [
+        1234500,
+        77711286
+      ]
+    },
+    "version": 1,
     "createdAt": 88572716,
     "updatedAt": 54133883
   },
@@ -123,15 +133,6 @@
     "id": 2,
     "ownerId": 77815229,
     "substituteDocumentId": 40114552,
-    "owner": {
-      "id": 95877757,
-      "fullName": "Granite",
-      "email": "Eldon97@gmail.com",
-      "templatesIds": [
-        1234500
-      ]
-    },
-    "version": 2,
     "actualVersion": {
       "id": 2,
       "name": "Example document",
@@ -206,12 +207,21 @@
         ]
       },
       "labelIds": [
-        74100572
+        74100572,
+        88708269
       ],
       "labels": [
         {
           "id": 74100572,
-          "name": "Example label"
+          "name": "Example label",
+          "createdAt": 71556545,
+          "updatedAt": 17664761
+        },
+        {
+          "id": 52825943,
+          "name": "hard drive",
+          "createdAt": 11070462,
+          "updatedAt": 48262738
         }
       ],
       "comment": "Lorem ipsum dolor sit amet.",
@@ -236,6 +246,16 @@
       "createdAt": 88572716,
       "updatedAt": 54133883
     },
+    "owner": {
+      "id": 95877757,
+      "fullName": "Granite",
+      "email": "Eldon97@gmail.com",
+      "templatesIds": [
+        1234500,
+        19474480
+      ]
+    },
+    "version": 2,
     "createdAt": 88572716,
     "updatedAt": 54133883
   },
@@ -243,15 +263,6 @@
     "id": 3,
     "ownerId": 77815229,
     "substituteDocumentId": 40114552,
-    "owner": {
-      "id": 95877757,
-      "fullName": "Granite",
-      "email": "Eldon97@gmail.com",
-      "templatesIds": [
-        1234500
-      ]
-    },
-    "version": 2,
     "actualVersion": {
       "id": 3,
       "name": "Example document",
@@ -326,12 +337,21 @@
         ]
       },
       "labelIds": [
-        74100572
+        74100572,
+        66483697
       ],
       "labels": [
         {
           "id": 74100572,
-          "name": "Example label"
+          "name": "Example label",
+          "createdAt": 10290250,
+          "updatedAt": 80319130
+        },
+        {
+          "id": 15675409,
+          "name": "Congolese Franc",
+          "createdAt": 42141718,
+          "updatedAt": 55241334
         }
       ],
       "comment": "Lorem ipsum dolor sit amet.",
@@ -356,6 +376,16 @@
       "createdAt": 88572716,
       "updatedAt": 54133883
     },
+    "owner": {
+      "id": 95877757,
+      "fullName": "Granite",
+      "email": "Eldon97@gmail.com",
+      "templatesIds": [
+        1234500,
+        74196906
+      ]
+    },
+    "version": 2,
     "createdAt": 88572716,
     "updatedAt": 54133883
   }

@@ -5,7 +5,8 @@
     "name": "Example document",
     "templateId": 1234500,
     "labelIds": [
-      74100572
+      74100572,
+      37146410
     ],
     "comment": "Lorem ipsum dolor sit amet.",
     "attributeValues": [

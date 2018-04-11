@@ -4,11 +4,11 @@ const fs = require('fs');
 const jsf = require('json-schema-faker');
 const parser = require('raml-1-parser');
 const isEqual = require('lodash.isequal')
+const deepAssign = require('lodash.merge')
 
 jsf.extend('faker', function() {
     return require('faker');
 });
-const deepAssign = require('assign-deep');
 const outDir = '/out';
 const schemaDir = '/workschema';
 const originSchemaDir = '/schema';
@@ -147,7 +147,7 @@ function addRules(obj) {
             if (obj[prop] === 'string') {
                 obj.faker = 'random.word'
             } else if (obj[prop] === 'array') {
-                obj.minItems = 1
+                obj.minItems = 2
                 obj.maxItems = 2
             } else if (obj[prop] === 'integer') {
                 obj.minimum = 1

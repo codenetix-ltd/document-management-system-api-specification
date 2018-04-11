@@ -73,12 +73,21 @@
       ]
     },
     "labelIds": [
-      74100572
+      74100572,
+      18167998
     ],
     "labels": [
       {
         "id": 74100572,
-        "name": "Example label"
+        "name": "Example label",
+        "createdAt": 6549979,
+        "updatedAt": 53424109
+      },
+      {
+        "id": 41889600,
+        "name": "circuit",
+        "createdAt": 78061152,
+        "updatedAt": 18038476
       }
     ],
     "comment": "Lorem ipsum dolor sit amet.",
@@ -177,12 +186,21 @@
       ]
     },
     "labelIds": [
-      74100572
+      74100572,
+      30880581
     ],
     "labels": [
       {
         "id": 74100572,
-        "name": "Example label"
+        "name": "Example label",
+        "createdAt": 6816414,
+        "updatedAt": 60858298
+      },
+      {
+        "id": 46211127,
+        "name": "calculate",
+        "createdAt": 51442931,
+        "updatedAt": 35018294
       }
     ],
     "comment": "Lorem ipsum dolor sit amet.",
@@ -281,12 +299,21 @@
       ]
     },
     "labelIds": [
-      74100572
+      74100572,
+      28142566
     ],
     "labels": [
       {
         "id": 74100572,
-        "name": "Example label"
+        "name": "Example label",
+        "createdAt": 95029762,
+        "updatedAt": 72193482
+      },
+      {
+        "id": 21784612,
+        "name": "Berkshire",
+        "createdAt": 87010535,
+        "updatedAt": 64050799
       }
     ],
     "comment": "Lorem ipsum dolor sit amet.",

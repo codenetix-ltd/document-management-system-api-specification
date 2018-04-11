@@ -72,12 +72,21 @@
     ]
   },
   "labelIds": [
-    74100572
+    74100572,
+    17505912
   ],
   "labels": [
     {
       "id": 74100572,
-      "name": "Example label"
+      "name": "Example label",
+      "createdAt": 91955576,
+      "updatedAt": 96141577
+    },
+    {
+      "id": 82360285,
+      "name": "Springs",
+      "createdAt": 10498279,
+      "updatedAt": 7769842
     }
   ],
   "comment": "Lorem ipsum dolor sit amet.",

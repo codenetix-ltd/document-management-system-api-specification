@@ -2,15 +2,6 @@
   "id": 1234500,
   "ownerId": 77815229,
   "substituteDocumentId": 40114552,
-  "owner": {
-    "id": 95877757,
-    "fullName": "Granite",
-    "email": "Eldon97@gmail.com",
-    "templatesIds": [
-      1234500
-    ]
-  },
-  "version": 22,
   "actualVersion": {
     "id": 22,
     "name": "Example document",
@@ -85,12 +76,21 @@
       ]
     },
     "labelIds": [
-      74100572
+      74100572,
+      59311714
     ],
     "labels": [
       {
         "id": 74100572,
-        "name": "Example label"
+        "name": "Example label",
+        "createdAt": 366096,
+        "updatedAt": 46726355
+      },
+      {
+        "id": 13379697,
+        "name": "wireless",
+        "createdAt": 40410480,
+        "updatedAt": 53139431
       }
     ],
     "comment": "Lorem ipsum dolor sit amet.",
@@ -115,6 +115,16 @@
     "createdAt": 88572716,
     "updatedAt": 54133883
   },
+  "owner": {
+    "id": 95877757,
+    "fullName": "Granite",
+    "email": "Eldon97@gmail.com",
+    "templatesIds": [
+      1234500,
+      23348181
+    ]
+  },
+  "version": 22,
   "createdAt": 88572716,
   "updatedAt": 54133883
 }
