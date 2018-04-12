@@ -1,5 +1,1 @@
-/bin
-node_modules
-/examples_generator/node_modules/
 .idea
-temp

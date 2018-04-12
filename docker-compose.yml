@@ -4,7 +4,7 @@ services:
   documentation:
     image: registry.codenetix.com/documentation/documentation:master
     volumes:
-      - ./schema:/schema
+      - .:/schema
 
   generator:
     image: registry.codenetix.com/documentation/generator:master
@@ -16,7 +16,7 @@ services:
   mock:
     image: registry.codenetix.com/documentation/mock:master
     volumes:
-      - ./schema:/schema
+      - .:/schema
 
   proxy:
     image: codenetix/nginx-reverse-proxy
@@ -43,4 +43,4 @@ services:
     environment:
       - TESTING_URI=http://mock/v1
     volumes:
-      - ./schema:/schema
+      - .:/schema
