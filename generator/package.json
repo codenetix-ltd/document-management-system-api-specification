@@ -11,6 +11,7 @@
   "dependencies": {
     "faker": "^4.1.0",
     "json-schema-faker": "^0.5.0-rc15",
+    "lodash.difference": "^4.5.0",
     "lodash.isequal": "^4.5.0",
     "lodash.merge": "^4.6.1",
     "raml-lipsum": "^0.2.0",

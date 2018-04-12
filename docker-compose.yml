@@ -20,3 +20,4 @@ services:
     volumes:
       - ./schema:/schema
       - ./schema/examples:/out
+      - ./.generatorignore:/generator/.generatorignore

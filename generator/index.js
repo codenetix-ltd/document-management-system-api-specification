@@ -5,6 +5,7 @@ const jsf = require('json-schema-faker');
 const parser = require('raml-1-parser');
 const isEqual = require('lodash.isequal')
 const deepAssign = require('lodash.merge')
+const difference = require('lodash.difference')
 
 jsf.extend('faker', function() {
     return require('faker');
@@ -12,19 +13,21 @@ jsf.extend('faker', function() {
 const outDir = '/out';
 const schemaDir = '/workschema';
 const originSchemaDir = '/schema';
+const generatorIgnorePath = '/generator/.generatorignore';
 
 (async ()=> {
     const filePath = path.join(schemaDir,'api.raml');
     const ramlData = await readFile(filePath);
     const originApi = await parser.loadRAML(path.join(originSchemaDir, 'api.raml'));
     const jsonRAML = originApi.expand(true).toJSON({ serializeMetadata: false });
-    const types = jsonRAML.types.map(function(item){
+    const generatorIgnore = (await readFile(generatorIgnorePath)).split('\n');
+    console.log('ignore', generatorIgnore);
+    const types = difference(jsonRAML.types.map(function(item){
         return Object.keys(item)[0];
-    });
-
+    }), generatorIgnore);
     types.forEach(item=>{
         handleType(ramlData, item);
-        if(!item.endsWith('Request')) {
+        if(!item.endsWith('Request') && !generatorIgnore.includes(item+'s')) {
             handleArrayType(ramlData, item, 3);
         }
     });

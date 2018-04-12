@@ -24,6 +24,9 @@ types:
 
   Role: !include types/role.raml
   RoleRequest: !include requestTypes/role.raml
+  ResetPasswordRequest: !include requestTypes/resetPassword.raml
+  ResetEmailRequest: !include requestTypes/resetEmail.raml
+
 resourceTypes:
   PaginateCollection: !include ./resourceTypes/paginateCollection.raml
   Collection: !include ./resourceTypes/collection.raml
@@ -152,15 +155,44 @@ resourceTypes:
         responseItem: Role
         putRequestItem: RoleRequest
 
-/oauth/token:
-  post:
-    body:
-      application/json:
-        type: AuthRequest
-    responses:
-      200:
-        description:
-          Success Auth
-        body:
-          application/json:
-            Auth
+/oauth:
+  /token:
+    post:
+      body:
+        application/json:
+          type: AuthRequest
+      responses:
+        200:
+          description:
+            Success Auth
+          body:
+            application/json:
+              Auth
+  /logout:
+    post:
+      responses:
+        204:
+          description:
+            Success logout
+  /resetEmail:
+    post:
+      body:
+        application/json:
+          type: ResetEmailRequest
+      responses:
+        204:
+          description:
+            Email was sent
+  /resetPassword/{hash}:
+    uriParameters:
+      hash:
+        type: string
+        example: f5f2f2ec355835af36fea2ad93ac3de6
+    post:
+      body:
+        application/json:
+          type: ResetPasswordRequest
+      responses:
+        204:
+          description:
+            Success
