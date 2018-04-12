@@ -1,7 +1,9 @@
 FROM alpine
 
-WORKDIR /schema
+WORKDIR /data
 
 COPY ./schema .
 
 VOLUME /schema
+
+ENTRYPOINT cp -r /data/* /schema
