@@ -38,6 +38,11 @@ resourceTypes:
       responseItem: User
       postRequestItem: UserRequest
       examplesJson: !include examples/Users.json
+  /current:
+    type:
+      Item:
+        responseItem: User
+        putRequestItem: UserRequest
   /{id}:
     uriParameters:
       id:
