@@ -44,5 +44,3 @@ services:
       - TESTING_URI=http://mock/v1
     volumes:
       - ./schema:/schema
-    tty: true
-    command: bash
