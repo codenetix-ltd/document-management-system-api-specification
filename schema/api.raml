@@ -99,14 +99,19 @@ resourceTypes:
         putRequestItem: DocumentPutRequest
 
 /documents/{id}/versions:
+  uriParameters:
+    id:
+      type: integer
+      example: 1
+      default: 1
   type:
     PaginateCollection:
       responseItem: DocumentVersion
       postRequestItem: DocumentVersionRequest
       examplesJson: !include examples/DocumentVersions.json
-  /{id}:
+  /{versionId}:
     uriParameters:
-      id:
+      versionId:
         type: integer
         example: 1
         default: 1
@@ -188,6 +193,7 @@ resourceTypes:
       hash:
         type: string
         example: f5f2f2ec355835af36fea2ad93ac3de6
+        default: f5f2f2ec355835af36fea2ad93ac3de6
     post:
       body:
         application/json:
