@@ -5,5 +5,3 @@ WORKDIR /schema
 COPY . .
 
 VOLUME /schema
-
-ENTRYPOINT []

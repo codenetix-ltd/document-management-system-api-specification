@@ -2,70 +2,79 @@ image: docker:latest
 
 stages:
   - build
-  - deploy
-  - after_deploy
+#  - deploy
+#  - after_deploy
 
 variables:
   DOC_CONTAINER_IMAGE: $CI_REGISTRY_IMAGE:doc-$CI_BUILD_REF_NAME
   MOCK_CONTAINER_IMAGE: $CI_REGISTRY_IMAGE:mock-$CI_BUILD_REF_NAME
   TEST_CONTAINER_IMAGE: $CI_REGISTRY_IMAGE:test-$CI_BUILD_REF_NAME
+  CONTAINER_IMAGE: $CI_REGISTRY_IMAGE:$CI_BUILD_REF_NAME
 
 before_script:
   - docker login -u gitlab-ci-token -p $CI_BUILD_TOKEN $CI_REGISTRY
 
-build_mock:
+build:
   stage: build
   script:
-    - docker build --pull -f mock/Dockerfile -t $MOCK_CONTAINER_IMAGE .
-    - docker push $MOCK_CONTAINER_IMAGE
+    - docker build --pull -f schema/Dockerfile -t $CONTAINER_IMAGE .
+    - docker push $CONTAINER_IMAGE
   tags:
     - docker-build
 
-build_doc:
-  stage: build
-  script:
-    - docker build --pull -f documentation/Dockerfile -t $DOC_CONTAINER_IMAGE .
-    - docker push $DOC_CONTAINER_IMAGE
-  tags:
-    - docker-build
-
-build_test:
-  stage: build
-  script:
-    - docker build --pull -f test/Dockerfile -t $TEST_CONTAINER_IMAGE .
-    - docker push $TEST_CONTAINER_IMAGE
-  tags:
-    - docker-build
-
-deploy_mock:
-  variables:
-    GIT_STRATEGY: none
-  stage: deploy
-  only:
-    - master
-  script:
-    - docker run --env RANCHER_URL="http://rancher.codenetix.com/v1/projects/1a17584" --env RANCHER_ACCESS_KEY="$RANCHER_ACCESS_KEY" --env RANCHER_SECRET_KEY="$RANCHER_SECRET_KEY" --env RANCHER_STACK_ID="1st133" --env RANCHER_STACK_NAME="Default" --env RANCHER_SERVICE_NAME="mock" mildberrydigital/rancher-remote-upgrade:latest mock
-  tags:
-    - docker-build
-
-deploy_doc:
-  variables:
-    GIT_STRATEGY: none
-  stage: deploy
-  only:
-    - master
-  script:
-    - docker run --env RANCHER_URL="http://rancher.codenetix.com/v1/projects/1a17584" --env RANCHER_ACCESS_KEY="$RANCHER_ACCESS_KEY" --env RANCHER_SECRET_KEY="$RANCHER_SECRET_KEY" --env RANCHER_STACK_ID="1st133" --env RANCHER_STACK_NAME="Default" --env RANCHER_SERVICE_NAME="documentation" mildberrydigital/rancher-remote-upgrade:latest documentation
-  tags:
-    - docker-build
-
-restart_proxy:
-  variables:
-      GIT_STRATEGY: none
-  stage: after_deploy
-  only:
-    - master
-  script:
-    - docker run --env RANCHER_URL="http://rancher.codenetix.com/v1/projects/1a17584" --env RANCHER_ACCESS_KEY="$RANCHER_ACCESS_KEY" --env RANCHER_SECRET_KEY="$RANCHER_SECRET_KEY" --env RANCHER_STACK_ID="1st133" --env RANCHER_STACK_NAME="Default" --env RANCHER_SERVICE_NAME="proxy" mildberrydigital/rancher-remote-upgrade:latest proxy
-  tags:
-    - docker-build
+#build_mock:
+#  stage: build
+#  script:
+#    - docker build --pull -f mock/Dockerfile -t $MOCK_CONTAINER_IMAGE .
+#    - docker push $MOCK_CONTAINER_IMAGE
+#  tags:
+#    - docker-build
+#
+#build_doc:
+#  stage: build
+#  script:
+#    - docker build --pull -f documentation/Dockerfile -t $DOC_CONTAINER_IMAGE .
+#    - docker push $DOC_CONTAINER_IMAGE
+#  tags:
+#    - docker-build
+#
+#build_test:
+#  stage: build
+#  script:
+#    - docker build --pull -f test/Dockerfile -t $TEST_CONTAINER_IMAGE .
+#    - docker push $TEST_CONTAINER_IMAGE
+#  tags:
+#    - docker-build
+#
+#deploy_mock:
+#  variables:
+#    GIT_STRATEGY: none
+#  stage: deploy
+#  only:
+#    - master
+#  script:
+#    - docker run --env RANCHER_URL="http://rancher.codenetix.com/v1/projects/1a17584" --env RANCHER_ACCESS_KEY="$RANCHER_ACCESS_KEY" --env RANCHER_SECRET_KEY="$RANCHER_SECRET_KEY" --env RANCHER_STACK_ID="1st133" --env RANCHER_STACK_NAME="Default" --env RANCHER_SERVICE_NAME="mock" mildberrydigital/rancher-remote-upgrade:latest mock
+#  tags:
+#    - docker-build
+#
+#deploy_doc:
+#  variables:
+#    GIT_STRATEGY: none
+#  stage: deploy
+#  only:
+#    - master
+#  script:
+#    - docker run --env RANCHER_URL="http://rancher.codenetix.com/v1/projects/1a17584" --env RANCHER_ACCESS_KEY="$RANCHER_ACCESS_KEY" --env RANCHER_SECRET_KEY="$RANCHER_SECRET_KEY" --env RANCHER_STACK_ID="1st133" --env RANCHER_STACK_NAME="Default" --env RANCHER_SERVICE_NAME="documentation" mildberrydigital/rancher-remote-upgrade:latest documentation
+#  tags:
+#    - docker-build
+#
+#restart_proxy:
+#  variables:
+#      GIT_STRATEGY: none
+#  stage: after_deploy
+#  only:
+#    - master
+#  script:
+#    - docker run --env RANCHER_URL="http://rancher.codenetix.com/v1/projects/1a17584" --env RANCHER_ACCESS_KEY="$RANCHER_ACCESS_KEY" --env RANCHER_SECRET_KEY="$RANCHER_SECRET_KEY" --env RANCHER_STACK_ID="1st133" --env RANCHER_STACK_NAME="Default" --env RANCHER_SERVICE_NAME="proxy" mildberrydigital/rancher-remote-upgrade:latest proxy
+#  tags:
+#    - docker-build
