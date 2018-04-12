@@ -9,8 +9,8 @@ services:
   generator:
     image: registry.codenetix.com/documentation/generator:master
     volumes:
-      - ./schema:/schema
-      - ./schema/examples:/out
+      - .:/schema
+      - ./examples:/out
       - ./.generatorignore:/generator/.generatorignore
 
   mock:
