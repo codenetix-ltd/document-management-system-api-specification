@@ -2,6 +2,6 @@ FROM alpine
 
 WORKDIR /schema
 
-COPY . .
+COPY ./schema .
 
 VOLUME /schema
