@@ -4,8 +4,10 @@ WORKDIR /data
 
 COPY . .
 
+RUN chmod +x entrypoint.sh
+
 RUN mkdir /schema
 
 VOLUME /schema
 
-ENTRYPOINT cp -r /data/* /schema
+ENTRYPOINT ['./entrypoint.sh']
