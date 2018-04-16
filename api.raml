@@ -5,7 +5,8 @@ version: v1
 baseUri: http://dms.codenetix.com/{version}
 types:
   User: !include types/user.raml
-  UserRequest: !include requestTypes/user.raml
+  UserPutRequest: !include requestTypes/userPut.raml
+  UserPostRequest: !include requestTypes/userPost.raml
   Template: !include types/template.raml
   TemplateRequest: !include requestTypes/template.raml
   Attribute: !include types/attribute.raml
@@ -36,13 +37,13 @@ resourceTypes:
   type:
     PaginateCollection:
       responseItem: User
-      postRequestItem: UserRequest
+      postRequestItem: UserPostRequest
       examplesJson: !include examples/Users.json
   /current:
     type:
       Item:
         responseItem: User
-        putRequestItem: UserRequest
+        putRequestItem: UserPutRequest
   /{id}:
     uriParameters:
       id:
@@ -52,7 +53,7 @@ resourceTypes:
     type:
       Item:
         responseItem: User
-        putRequestItem: UserRequest
+        putRequestItem: UserPutRequest
 
 /templates:
   type:
