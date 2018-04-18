@@ -93,18 +93,22 @@
   "attributeValues": [
     {
       "id": 1234501,
+      "type": "string",
       "value": "Example attribute value"
     },
     {
       "id": 1234502,
+      "type": "string",
       "value": "Empty value"
     },
     {
       "id": 1234503,
+      "type": "string",
       "value": "Cell value 1"
     },
     {
       "id": 1234504,
+      "type": "integer",
       "value": 100
     }
   ],

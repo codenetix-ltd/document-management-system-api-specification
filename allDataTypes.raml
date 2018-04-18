@@ -1,0 +1,351 @@
+####################
+## RESPONSE TYPES ##
+####################
+Attribute:
+  type: object
+  properties:
+    id:
+      type: integer
+      example: 1
+    type: Type
+    name:
+      type: string
+      example: 'Example attribute 1'
+    data?: Table
+  example: !include examples/Attribute.json
+Auth:
+  type: object
+  properties:
+    tokenType:
+      type: string
+      enum: ['Bearer']
+      example: Bearer
+      displayName: Token Type
+      description: Type of token
+    expiresIn:
+      type: integer
+      example: 7600
+      displayName: Expires In
+      description: Token lifetime in seconds
+    accessToken:
+      type: string
+      example: MTQ0NjJtZzQ5OTF2NDE1ZTZjNGZmZjI3
+      description: Access token
+      displayName: Access Token
+    refreshToken:
+      type: string
+      example: EfOGYzYTlmM2YxOTQ5YGE3YmNmMDFk3TVk
+      description: Refresh access token
+      displayName: Refresh Access Token
+  example: !include examples/Auth.json
+Label:
+  type: SystemObject
+  properties:
+    name:
+      type: string
+      example: 'Example name 1'
+  example: !include examples/Label.json
+Role:
+  type: SystemObject
+  properties:
+    name:
+      type: string
+      example: 'Administrator'
+  example: !include examples/Role.json
+Template:
+  type: object
+  properties:
+    id:
+      type: integer
+      example: 1
+    name:
+      type: string
+      example: 'Example template name'
+    attributes: Attribute[]
+  example: !include examples/Template.json
+User:
+  type: object
+  properties:
+    id:
+      type: integer
+      example: 1
+    fullName:
+      type: string
+      example: 'John Doe'
+    email:
+      type: string
+      example: 'John@Doe.com'
+    templatesIds: integer[]
+  example: !include examples/User.json
+DocumentVersion:
+  type: SystemObject
+  properties:
+    name:
+      type: string
+      example: 'Example Document Version 1'
+    templateId:
+      type: integer
+      example: 42
+    template: Template
+    labelIds: integer[]
+    labels: Label[]
+    comment:
+      type: string
+      example: 'Comment content'
+    attributeValues:
+      type: ValueUnion[]
+  example: !include examples/DocumentVersion.json
+Document:
+  type: TimeStampObject
+  properties:
+    id:
+      type: integer
+      example: 1
+    ownerId:
+      type: integer
+      example: 42
+      displayName: Owner Id
+      description: User's identificator
+    substituteDocumentId:
+      type: integer
+      example: 43
+      displayName: Substitute Document Id
+      description: Identificator of substitute document
+    actualVersion: DocumentVersion
+    owner: User
+    version:
+      type: integer
+      example: 1
+      description: Version of the document
+  example: !include examples/Document.json
+Type:
+  type: object
+  properties:
+    id:
+      type: integer
+      example: 1
+    name:
+      type: string
+      enum: ['String', 'Numeric', 'Boolean', 'Table', 'Value with deviations']
+      example: Numeric
+    machineName:
+      type: string
+      enum: ['string', 'numeric', 'boolean', 'table', 'valueWithDeviations']
+      example: numeric
+      description: Machine readable name variant
+  example: !include examples/Type.json
+
+##################
+## SYSTEM TYPES ##
+##################
+RowColumn:
+  type: object
+  properties:
+    id:
+      type: integer
+      example: 1
+    isLocked:
+      type: boolean
+      displayName: Is Locked
+      example: true
+      description: True if the column is locked, False otherwise
+    type: Type
+Row:
+  type: object
+  properties:
+    name:
+      type: string
+      example: 'Example row 1'
+    columns: RowColumn[]
+Column:
+  type: object
+  properties:
+    name:
+      type: string
+      example: 'Example column 1'
+    type:
+      type: Type
+Table:
+  type: object
+  properties:
+    rows: Row[]
+    columns: Column[]
+Value:
+  type: object
+  discriminator: type
+  properties:
+    id:
+      type: integer
+      example: 1
+    type:
+      type: string
+      example: string
+      description: Type of value field
+ValueInteger:
+  type: Value
+  discriminatorValue: "integer"
+  properties:
+    type:
+      enum: ["integer"]
+    value: integer
+ValueString:
+  type: Value
+  discriminatorValue: "string"
+  properties:
+    value: string
+    type:
+      enum: ["string"]
+ValueBoolean:
+  type: Value
+  discriminatorValue: "boolean"
+  properties:
+    value: boolean
+    type:
+      enum: ["boolean"]
+ValueUnion: ValueString|ValueInteger|ValueBoolean
+
+SystemObject:
+  type: TimeStampObject
+  properties:
+    id:
+      type: integer
+      example: 1
+TimeStampObject:
+  type: object
+  properties:
+    createdAt:
+      type: integer
+      example: 1524043120
+    updatedAt:
+      type: integer
+      example: 1524043120
+
+###################
+## REQUEST TYPES ##
+###################
+AttributeRequest:
+  type: object
+  properties:
+    name:
+      type: string
+      maxLength: 255
+    typeId: integer
+    table: TableRequest
+  example: !include examples/AttributeRequest.json
+AuthRequest:
+    type: object
+    properties:
+      grantType:
+        type: string
+        enum: ['password']
+      clientId: string
+      clientSecret: string
+      username: string
+      password: string
+      scope: string
+    example: !include examples/AuthRequest.json
+UserPostRequest:
+  type: object
+  properties:
+    fullName:
+      type: string
+      minLength: 1
+      maxLength: 255
+    email:
+      type: string
+      minLength: 1
+      maxLength: 255
+    templatesIds: integer[]
+    password:
+      type: string
+      minLength: 6
+    passwordConfirmation: string
+    avatarId: integer
+
+  example: !include examples/UserPostRequest.json
+UserPutRequest:
+  type: object
+  properties:
+    fullName:
+      type: string
+      minLength: 1
+      maxLength: 255
+    email:
+      type: string
+      minLength: 1
+      maxLength: 255
+    templatesIds: integer[]
+    avatarId: integer
+  example: !include examples/UserPutRequest.json
+RowRequest:
+  type: object
+  properties:
+    name: string
+    columns: RowColumnRequest[]
+RowColumnRequest:
+  type: object
+  properties:
+    typeId: integer
+    isLocked: boolean
+ColumnRequest:
+  type: object
+  properties:
+    name: string
+    typeId: integer
+TableRequest:
+  type: object
+  properties:
+    rows: RowRequest[]
+    columns: ColumnRequest[]
+
+TemplateRequest:
+  type: object
+  properties:
+    name:
+      type: string
+      maxLength: 255
+  example: !include examples/TemplateRequest.json
+RoleRequest:
+  type: object
+  properties:
+    name: string
+  example: !include examples/RoleRequest.json
+DocumentVersionRequest:
+  type: object
+  properties:
+    name: string
+    templateId: integer
+    labelIds: integer[]
+    comment: string
+    attributeValues: ValueUnion[]
+  example: !include examples/DocumentVersionRequest.json
+DocumentPostRequest:
+  type: object
+  properties:
+    ownerId: integer
+    substituteDocumentId: integer
+    actualVersion: DocumentVersionRequest
+  example: !include examples/DocumentPostRequest.json
+DocumentPutRequest:
+  type: object
+  properties:
+    ownerId: integer
+    substituteDocumentId: integer
+    actualVersion: DocumentVersionRequest
+  example: !include examples/DocumentPutRequest.json
+ResetEmailRequest:
+  type: object
+  properties:
+    email: string
+  example: !include examples/ResetEmailRequest.json
+ResetPasswordRequest:
+  type: object
+  properties:
+    password: string
+    confirm: string
+  example: !include examples/ResetPasswordRequest.json
+LabelRequest:
+  type: object
+  properties:
+    name: string
+  example: !include examples/LabelRequest.json

@@ -11,7 +11,7 @@ get:
         Singular item
       body:
         application/json:
-          type: <<responseItem>>
+          <<responseItem>>
 
 put:
   queryParameters:
@@ -21,7 +21,7 @@ put:
       example: user,type
   body:
     application/json:
-      type: <<putRequestItem>>
+      <<putRequestItem>>
   responses:
     200:
       description:

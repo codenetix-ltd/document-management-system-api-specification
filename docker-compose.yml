@@ -3,6 +3,8 @@ services:
 
   documentation:
     image: registry.codenetix.com/documentation/documentation:master
+    environment:
+      - THEME=slate
     volumes:
       - .:/schema
 
