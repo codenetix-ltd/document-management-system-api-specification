@@ -17,6 +17,8 @@ build:
   script:
     - docker build --pull -t $CONTAINER_IMAGE .
     - docker push $CONTAINER_IMAGE
+  only:
+    - master
   tags:
     - docker-build
 
