@@ -135,16 +135,13 @@ Type:
       description: Machine readable name variant
   example: !include examples/Type.json
 
-
-
-
 AccessType:
   type: object
   properties:
     id:
       type: string
       enum: ['none', 'allowed', 'own', 'any', 'qualify']
-      example: 1
+      example: 'allowed'
     label:
       type: string
       example: Any template
