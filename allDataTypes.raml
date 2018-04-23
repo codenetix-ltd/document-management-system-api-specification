@@ -135,6 +135,66 @@ Type:
       description: Machine readable name variant
   example: !include examples/Type.json
 
+
+
+
+AccessType:
+  type: object
+  properties:
+    id:
+      type: string
+      enum: ['none', 'allowed', 'own', 'any', 'qualify']
+      example: 1
+    label:
+      type: string
+      example: Any template
+  example: !include examples/AccessType.json
+Qualifier:
+  type: object
+  properties:
+    id:
+      type: integer
+      example: 1
+    label:
+      type: string
+      example: numeric
+      description: Human readable name variant
+    accessTypes: AccessType[]
+  example: !include examples/Qualifier.json
+Permission:
+  type: object
+  properties:
+    id:
+      type: integer
+      example: 1
+    name:
+      type: string
+      example: Documents
+      description: Machine readable name variant
+    label:
+      type: string
+      example: numeric
+      description: Human readable name variant
+    accessTypes: AccessType[]
+  example: !include examples/Permission.json
+PermissionGroup:
+  type: object
+  properties:
+    id:
+      type: integer
+      example: 1
+    name:
+      type: string
+      example: Documents
+      description: Machine readable name variant
+    label:
+      type: string
+      example: numeric
+      description: Human readable name variant
+    permissions: Permission[]
+    qualifiers: Qualifier[]
+  example: !include examples/PermissionGroup.json
+
 ##################
 ## SYSTEM TYPES ##
 ##################

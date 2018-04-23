@@ -1,0 +1,30 @@
+{
+  "id": 1,
+  "name": "example_permission_group",
+  "label": "Example permission group",
+  "permissions": [
+    {
+      "id": 1,
+      "name": "example_permission",
+      "label": "Example permission",
+      "accessTypes": [
+        {
+          "id": "none",
+          "label": "None"
+        }
+      ]
+    }
+  ],
+  "qualifiers": [
+    {
+      "id": 1,
+      "label": "Example qualifier",
+      "accessTypes": [
+        {
+          "id": "none",
+          "label": "None"
+        }
+      ]
+    }
+  ]
+}

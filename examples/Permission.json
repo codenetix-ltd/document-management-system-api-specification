@@ -1,0 +1,11 @@
+{
+  "id": 1,
+  "name": "example_permission",
+  "label": "Example permission",
+  "accessTypes": [
+    {
+      "id": "none",
+      "label": "None"
+    }
+  ]
+}
