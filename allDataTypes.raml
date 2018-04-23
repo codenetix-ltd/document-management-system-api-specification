@@ -230,7 +230,7 @@ AttributeRequest:
       type: string
       maxLength: 255
     typeId: integer
-    table: TableRequest
+    data?: TableRequest
   example: !include examples/AttributeRequest.json
 AuthRequest:
     type: object
@@ -255,7 +255,7 @@ UserPostRequest:
       type: string
       minLength: 1
       maxLength: 255
-    templatesIds: integer[]
+    templatesIds?: integer[]
     password:
       type: string
       minLength: 6
