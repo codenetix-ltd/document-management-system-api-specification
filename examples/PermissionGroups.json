@@ -1,0 +1,86 @@
+[
+  {
+    "id": 1,
+    "name": "documents_permission_group",
+    "label": "Documents permission group",
+    "permissions": [
+      {
+        "id": 1,
+        "name": "document_update",
+        "label": "Document update",
+        "accessTypes": [
+          {
+            "id": "none",
+            "label": "None"
+          },
+          {
+            "id": "own",
+            "label": "Own"
+          },
+          {
+            "id": "any",
+            "label": "Any"
+          },
+          {
+            "id": "qualify",
+            "label": "By qualifiers"
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "name": "document_delete",
+        "label": "Document delete",
+        "accessTypes": [
+          {
+            "id": "none",
+            "label": "None"
+          },
+          {
+            "id": "own",
+            "label": "Own"
+          },
+          {
+            "id": "any",
+            "label": "Any"
+          },
+          {
+            "id": "qualify",
+            "label": "By qualifiers"
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "name": "document_create",
+        "label": "Document create",
+        "accessTypes": [
+          {
+            "id": "none",
+            "label": "None"
+          },
+          {
+            "id": "allowed",
+            "label": "Allowed"
+          }
+        ]
+      }
+    ],
+    "qualifiers": [
+      {
+        "id": 1,
+        "label": "Template",
+        "accessTypes": [
+          {
+            "id": "any",
+            "label": "Any"
+          },
+          {
+            "id": "own",
+            "label": "Own"
+          }
+        ]
+      }
+    ]
+  }
+]
