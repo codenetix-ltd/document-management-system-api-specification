@@ -3,18 +3,93 @@
     "id": 1,
     "name": "admin",
     "createdAt": 88572716,
-    "updatedAt": 54133883
+    "updatedAt": 54133883,
+    "templateIds": [
+      24268016,
+      419111
+    ],
+    "permissionValues": [
+      {
+        "id": 1,
+        "accessType": {
+          "id": "none",
+          "label": "None"
+        },
+        "qualifiers": [
+          {
+            "id": 1,
+            "label": "Example qualifier",
+            "accessTypes": [
+              {
+                "id": "none",
+                "label": "None"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 2,
     "name": "user",
     "createdAt": 88572716,
-    "updatedAt": 54133883
+    "updatedAt": 54133883,
+    "templateIds": [
+      24268016,
+      419111
+    ],
+    "permissionValues": [
+      {
+        "id": 1,
+        "accessType": {
+          "id": "none",
+          "label": "None"
+        },
+        "qualifiers": [
+          {
+            "id": 1,
+            "label": "Example qualifier",
+            "accessTypes": [
+              {
+                "id": "none",
+                "label": "None"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 3,
     "name": "simple",
     "createdAt": 88572716,
-    "updatedAt": 54133883
+    "updatedAt": 54133883,
+    "templateIds": [
+      24268016,
+      419111
+    ],
+    "permissionValues": [
+      {
+        "id": 1,
+        "accessType": {
+          "id": "none",
+          "label": "None"
+        },
+        "qualifiers": [
+          {
+            "id": 1,
+            "label": "Example qualifier",
+            "accessTypes": [
+              {
+                "id": "none",
+                "label": "None"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   }
 ]

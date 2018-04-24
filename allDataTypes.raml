@@ -45,12 +45,23 @@ Label:
       type: string
       example: 'Example name 1'
   example: !include examples/Label.json
+PermissionValue:
+  type: object
+  properties:
+    id:
+      type: integer
+      example: 1
+    accessType: AccessType
+    qualifiers: Qualifier[]
+  example: !include examples/PermissionValue.json
 Role:
   type: SystemObject
   properties:
     name:
       type: string
       example: 'Administrator'
+    templateIds: integer[]
+    permissionValues: PermissionValue[]
   example: !include examples/Role.json
 Template:
   type: object

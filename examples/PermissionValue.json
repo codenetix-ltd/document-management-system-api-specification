@@ -1,0 +1,19 @@
+{
+  "id": 1,
+  "accessType": {
+    "id": "none",
+    "label": "None"
+  },
+  "qualifiers": [
+    {
+      "id": 1,
+      "label": "Example qualifier",
+      "accessTypes": [
+        {
+          "id": "none",
+          "label": "None"
+        }
+      ]
+    }
+  ]
+}
