@@ -192,3 +192,24 @@ resourceTypes:
     Collection:
       responseItem: PermissionGroup
       examplesJson: !include examples/PermissionGroups.json
+
+/files:
+  post:
+    body:
+      multipart/form-data:
+        properties:
+          file:
+            description: The file to be uploaded.
+            required: true
+            type: file
+    responses:
+      201:
+        description:
+          Success Upload
+        body:
+          application/json:
+            type: object
+            properties:
+              id: integer
+            example:
+              id: 1

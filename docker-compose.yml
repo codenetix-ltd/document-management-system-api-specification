@@ -1,10 +1,16 @@
 version: "3"
 services:
 
+  documentation_dev:
+    image: registry.codenetix.com/documentation/documentation:master
+    volumes:
+      - .:/schema
+    ports:
+      - 8000:80
+    tty: true
+
   documentation:
     image: registry.codenetix.com/documentation/documentation:master
-    environment:
-      - THEME=slate
     volumes:
       - .:/schema
 
