@@ -11,20 +11,29 @@
     {
       "id": 1,
       "accessType": {
-        "id": "none",
-        "label": "None"
+        "id": "qualify",
+        "label": "Qualify"
       },
       "qualifiers": [
         {
           "id": 1,
-          "label": "Example qualifier",
+          "label": "Template",
           "accessTypes": [
             {
-              "id": "none",
-              "label": "None"
+              "id": "any",
+              "label": "Any"
             }
           ]
         }
+      ]
+    },
+    {
+      "id": 2,
+      "accessType": {
+        "id": "none",
+        "label": "None"
+      },
+      "qualifiers": [
       ]
     }
   ]

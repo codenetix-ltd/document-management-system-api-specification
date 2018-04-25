@@ -28,7 +28,45 @@
         ]
       },
       {
-        "id": 1,
+        "id": 2,
+        "name": "document_create",
+        "label": "Document create",
+        "accessTypes": [
+          {
+            "id": "none",
+            "label": "None"
+          },
+          {
+            "id": "allowed",
+            "label": "Allowed"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "document_view",
+        "label": "Document view",
+        "accessTypes": [
+          {
+            "id": "none",
+            "label": "None"
+          },
+          {
+            "id": "own",
+            "label": "Own"
+          },
+          {
+            "id": "any",
+            "label": "Any"
+          },
+          {
+            "id": "qualify",
+            "label": "By qualifiers"
+          }
+        ]
+      },
+      {
+        "id": 4,
         "name": "document_delete",
         "label": "Document delete",
         "accessTypes": [
@@ -51,20 +89,29 @@
         ]
       },
       {
-        "id": 1,
-        "name": "document_create",
-        "label": "Document create",
+        "id": 5,
+        "name": "document_archive",
+        "label": "Document archive",
         "accessTypes": [
           {
             "id": "none",
             "label": "None"
           },
           {
-            "id": "allowed",
-            "label": "Allowed"
+            "id": "own",
+            "label": "Own"
+          },
+          {
+            "id": "any",
+            "label": "Any"
+          },
+          {
+            "id": "qualify",
+            "label": "By qualifiers"
           }
         ]
       }
+
     ],
     "qualifiers": [
       {
