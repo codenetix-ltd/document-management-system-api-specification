@@ -117,7 +117,7 @@ Document:
       example: 42
       displayName: Owner Id
       description: User's identificator
-    substituteDocumentId:
+    substituteDocumentId?:
       type: integer
       example: 43
       displayName: Substitute Document Id
@@ -392,14 +392,14 @@ DocumentPostRequest:
   type: object
   properties:
     ownerId: integer
-    substituteDocumentId: integer
+    substituteDocumentId?: integer
     actualVersion: DocumentVersionRequest
   example: !include examples/DocumentPostRequest.json
 DocumentPutRequest:
   type: object
   properties:
     ownerId: integer
-    substituteDocumentId: integer
+    substituteDocumentId?: integer
     actualVersion: DocumentVersionRequest
   example: !include examples/DocumentPutRequest.json
 ResetEmailRequest:
