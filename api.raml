@@ -8,6 +8,7 @@ types: !include allDataTypes.raml
 
 resourceTypes:
   PaginateCollection: !include resourceTypes/paginateCollection.raml
+  PaginationCollection: !include resourceTypes/paginationCollection.raml
   Collection: !include resourceTypes/collection.raml
   Item: !include resourceTypes/item.raml
 
@@ -213,3 +214,9 @@ resourceTypes:
               id: integer
             example:
               id: 1
+
+/logs:
+  type:
+    PaginationCollection:
+      responseItem: Log
+      examplesJson: !include examples/Logs.json

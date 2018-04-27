@@ -1,0 +1,20 @@
+{
+  "createdAt": 42453127,
+  "updatedAt": 33266233,
+  "id": 98742881,
+  "user": {
+    "id": 41959922,
+    "fullName": "Trevion Stanton I",
+    "email": "Houston.Cummings@hotmail.com",
+    "templatesIds": [
+      62716253,
+      20016935
+    ]
+  },
+  "action": "login",
+  "link": {
+    "title": "Login",
+    "url": "http://example.com/user/41959922"
+  },
+  "type": "user"
+}

@@ -1,0 +1,62 @@
+[
+  {
+    "createdAt": 7691225,
+    "updatedAt": 21456061,
+    "id": 80731024,
+    "user": {
+      "id": 44305473,
+      "fullName": "Kaitlin Rogahn",
+      "email": "Domingo.Roberts@hotmail.com",
+      "templatesIds": [
+        97705567,
+        32093335
+      ]
+    },
+    "action": "login",
+    "link": {
+      "title": "Login",
+      "url": "http://example.com/user/41959922"
+    },
+    "type": "user"
+  },
+  {
+    "createdAt": 26409749,
+    "updatedAt": 38308224,
+    "id": 83210045,
+    "user": {
+      "id": 29231619,
+      "fullName": "Camille Mosciski",
+      "email": "Bessie51@yahoo.com",
+      "templatesIds": [
+        95370749,
+        66884697
+      ]
+    },
+    "action": "logout",
+    "link": {
+      "title": "Logout",
+      "url": "http://example.com/user/41959922"
+    },
+    "type": "user"
+  },
+  {
+    "createdAt": 36268498,
+    "updatedAt": 65824201,
+    "id": 27230952,
+    "user": {
+      "id": 23290966,
+      "fullName": "Benedict Stroman",
+      "email": "Edna_Durgan@yahoo.com",
+      "templatesIds": [
+        23732813,
+        20908419
+      ]
+    },
+    "action": "create",
+    "link": {
+      "title": "Created",
+      "url": "http://example.com/label/41959922"
+    },
+    "type": "label"
+  }
+]
