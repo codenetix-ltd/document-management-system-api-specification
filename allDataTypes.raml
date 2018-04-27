@@ -169,8 +169,20 @@ Qualifier:
       type: string
       example: numeric
       description: Human readable name variant
-    accessTypes: AccessType[]
+    accessType: AccessType
   example: !include examples/Qualifier.json
+QualifierStructure:
+  type: object
+  properties:
+    id:
+      type: integer
+      example: 1
+    label:
+      type: string
+      example: numeric
+      description: Human readable name variant
+    accessTypes: AccessType[]
+  example: !include examples/QualifierStructure.json
 Permission:
   type: object
   properties:
@@ -202,8 +214,19 @@ PermissionGroup:
       example: numeric
       description: Human readable name variant
     permissions: Permission[]
-    qualifiers: Qualifier[]
+    qualifiers: QualifierStructure[]
   example: !include examples/PermissionGroup.json
+Log:
+  type: SystemObject
+  properties:
+    user: User
+    action: string
+    link: Link
+    type:
+      type: string
+      enum: ['user', 'document', 'template', 'label']
+  example: !include examples/Log.json
+
 
 ##################
 ## SYSTEM TYPES ##
@@ -278,6 +301,12 @@ File:
   properties:
     id: integer
     name: string
+    url: string
+
+Link:
+  type: object
+  properties:
+    title: string
     url: string
 
 SystemObject:

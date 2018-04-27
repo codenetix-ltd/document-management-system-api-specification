@@ -21,3 +21,12 @@ TimeStampObject
 TimeStampObjects
 ValueUnion
 ValueUnions
+Document
+DocumentPutRequest
+DocumentPostRequest
+DocumentVersion
+DocumentVersionRequest
+Link
+AccessTypes
+File
+Files

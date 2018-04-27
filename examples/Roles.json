@@ -19,12 +19,10 @@
           {
             "id": 1,
             "label": "Template",
-            "accessTypes": [
-              {
-                "id": "own",
-                "label": "Own"
-              }
-            ]
+            "accessType": {
+              "id": "own",
+              "label": "Own"
+            }
           }
         ]
       },
@@ -38,12 +36,10 @@
           {
             "id": 2,
             "label": "Template",
-            "accessTypes": [
-              {
-                "id": "own",
-                "label": "Own"
-              }
-            ]
+            "accessType": {
+              "id": "own",
+              "label": "Own"
+            }
           }
         ]
       },
@@ -78,12 +74,10 @@
           {
             "id": 1,
             "label": "Template",
-            "accessTypes": [
-              {
-                "id": "own",
-                "label": "Own"
-              }
-            ]
+            "accessType": {
+              "id": "own",
+              "label": "Own"
+            }
           }
         ]
       },
@@ -97,12 +91,10 @@
           {
             "id": 2,
             "label": "Template",
-            "accessTypes": [
-              {
-                "id": "own",
-                "label": "Own"
-              }
-            ]
+            "accessType": {
+              "id": "own",
+              "label": "Own"
+            }
           }
         ]
       },
@@ -137,12 +129,10 @@
           {
             "id": 1,
             "label": "Template",
-            "accessTypes": [
-              {
-                "id": "own",
-                "label": "Own"
-              }
-            ]
+            "accessType": {
+              "id": "own",
+              "label": "Own"
+            }
           }
         ]
       },
@@ -156,12 +146,10 @@
           {
             "id": 2,
             "label": "Template",
-            "accessTypes": [
-              {
-                "id": "own",
-                "label": "Own"
-              }
-            ]
+            "accessType": {
+              "id": "own",
+              "label": "Own"
+            }
           }
         ]
       },
