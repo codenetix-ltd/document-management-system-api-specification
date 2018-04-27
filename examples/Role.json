@@ -20,8 +20,8 @@
           "label": "Template",
           "accessTypes": [
             {
-              "id": "any",
-              "label": "Any"
+              "id": "own",
+              "label": "Own"
             }
           ]
         }
@@ -29,6 +29,25 @@
     },
     {
       "id": 2,
+      "accessType": {
+        "id": "qualify",
+        "label": "Qualify"
+      },
+      "qualifiers": [
+        {
+          "id": 2,
+          "label": "Template",
+          "accessTypes": [
+            {
+              "id": "own",
+              "label": "Own"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
       "accessType": {
         "id": "none",
         "label": "None"

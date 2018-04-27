@@ -12,20 +12,48 @@
       {
         "id": 1,
         "accessType": {
-          "id": "none",
-          "label": "None"
+          "id": "qualify",
+          "label": "Qualify"
         },
         "qualifiers": [
           {
             "id": 1,
-            "label": "Example qualifier",
+            "label": "Template",
             "accessTypes": [
               {
-                "id": "none",
-                "label": "None"
+                "id": "own",
+                "label": "Own"
               }
             ]
           }
+        ]
+      },
+      {
+        "id": 2,
+        "accessType": {
+          "id": "qualify",
+          "label": "Qualify"
+        },
+        "qualifiers": [
+          {
+            "id": 2,
+            "label": "Template",
+            "accessTypes": [
+              {
+                "id": "own",
+                "label": "Own"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "accessType": {
+          "id": "none",
+          "label": "None"
+        },
+        "qualifiers": [
         ]
       }
     ]
@@ -43,20 +71,48 @@
       {
         "id": 1,
         "accessType": {
-          "id": "none",
-          "label": "None"
+          "id": "qualify",
+          "label": "Qualify"
         },
         "qualifiers": [
           {
             "id": 1,
-            "label": "Example qualifier",
+            "label": "Template",
             "accessTypes": [
               {
-                "id": "none",
-                "label": "None"
+                "id": "own",
+                "label": "Own"
               }
             ]
           }
+        ]
+      },
+      {
+        "id": 2,
+        "accessType": {
+          "id": "qualify",
+          "label": "Qualify"
+        },
+        "qualifiers": [
+          {
+            "id": 2,
+            "label": "Template",
+            "accessTypes": [
+              {
+                "id": "own",
+                "label": "Own"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "accessType": {
+          "id": "none",
+          "label": "None"
+        },
+        "qualifiers": [
         ]
       }
     ]
@@ -74,20 +130,48 @@
       {
         "id": 1,
         "accessType": {
-          "id": "none",
-          "label": "None"
+          "id": "qualify",
+          "label": "Qualify"
         },
         "qualifiers": [
           {
             "id": 1,
-            "label": "Example qualifier",
+            "label": "Template",
             "accessTypes": [
               {
-                "id": "none",
-                "label": "None"
+                "id": "own",
+                "label": "Own"
               }
             ]
           }
+        ]
+      },
+      {
+        "id": 2,
+        "accessType": {
+          "id": "qualify",
+          "label": "Qualify"
+        },
+        "qualifiers": [
+          {
+            "id": 2,
+            "label": "Template",
+            "accessTypes": [
+              {
+                "id": "own",
+                "label": "Own"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "accessType": {
+          "id": "none",
+          "label": "None"
+        },
+        "qualifiers": [
         ]
       }
     ]
