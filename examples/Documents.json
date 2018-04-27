@@ -80,6 +80,16 @@
         74100572,
         11945249
       ],
+      "fileIds": [
+        1
+      ],
+      "files": [
+        {
+          "id": 1,
+          "name": "file1",
+          "url": "http://example.com/files/file1.png"
+        }
+      ],
       "labels": [
         {
           "id": 74100572,
@@ -214,6 +224,16 @@
         74100572,
         88708269
       ],
+      "fileIds": [
+        1
+      ],
+      "files": [
+        {
+          "id": 1,
+          "name": "file1",
+          "url": "http://example.com/files/file1.png"
+        }
+      ],
       "labels": [
         {
           "id": 74100572,
@@ -347,6 +367,16 @@
       "labelIds": [
         74100572,
         66483697
+      ],
+      "fileIds": [
+        1
+      ],
+      "files": [
+        {
+          "id": 1,
+          "name": "file1",
+          "url": "http://example.com/files/file1.png"
+        }
       ],
       "labels": [
         {

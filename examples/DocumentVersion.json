@@ -90,6 +90,16 @@
     }
   ],
   "comment": "Lorem ipsum dolor sit amet.",
+  "fileIds": [
+    1
+  ],
+  "files": [
+    {
+      "id": 1,
+      "name": "file1",
+      "url": "http://example.com/files/file1.png"
+    }
+  ],
   "attributeValues": [
     {
       "id": 1234501,

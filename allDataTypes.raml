@@ -99,6 +99,8 @@ DocumentVersion:
       example: 42
     template: Template
     labelIds: integer[]
+    fileIds: integer[]
+    files: File[]
     labels: Label[]
     comment:
       type: string
@@ -271,6 +273,12 @@ ValueBoolean:
     type:
       enum: ["boolean"]
 ValueUnion: ValueString|ValueInteger|ValueBoolean
+File:
+  type: object
+  properties:
+    id: integer
+    name: string
+    url: string
 
 SystemObject:
   type: TimeStampObject

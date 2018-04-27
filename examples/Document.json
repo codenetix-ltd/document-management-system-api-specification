@@ -79,6 +79,16 @@
       74100572,
       59311714
     ],
+    "fileIds": [
+      1
+    ],
+    "files": [
+      {
+        "id": 1,
+        "name": "file1",
+        "url": "http://example.com/files/file1.png"
+      }
+    ],
     "labels": [
       {
         "id": 74100572,
