@@ -82,6 +82,18 @@ resourceTypes:
       Item:
         responseItem: Document
         putRequestItem: DocumentPutRequest
+    /actualVersion:
+      post:
+        body:
+          application/json:
+            type: DocumentSetActualVersionRequest
+        responses:
+          200:
+            description:
+              Success
+            body:
+              application/json:
+                Document
 
 /documents/{id}/versions:
   uriParameters:
