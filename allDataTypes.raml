@@ -439,6 +439,13 @@ DocumentPutRequest:
     substituteDocumentId?: integer
     actualVersion: DocumentVersionRequest
   example: !include examples/DocumentPutRequest.json
+DocumentPatchRequest:
+  type: object
+  properties:
+    ownerId?: integer
+    substituteDocumentId?: integer
+    actualVersionId?: integer
+  example: !include examples/DocumentPatchRequest.json
 ResetEmailRequest:
   type: object
   properties:

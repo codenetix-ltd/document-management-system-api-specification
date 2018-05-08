@@ -82,6 +82,22 @@ resourceTypes:
       Item:
         responseItem: Document
         putRequestItem: DocumentPutRequest
+    patch:
+      queryParameters:
+        with?:
+          description: Expand embeded entityes
+          type: string
+          example: user,type
+      body:
+        application/json:
+          DocumentPatchRequest
+      responses:
+        200:
+          description:
+            Updated item
+          body:
+            application/json:
+              Document
     /actualVersion:
       post:
         body:
