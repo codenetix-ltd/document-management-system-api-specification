@@ -1,3 +1,16 @@
 {
-  "name": "admin"
+  "name": "admin",
+  "templateIds": [1],
+  "permissionValues": [
+    {
+      "id": 1,
+      "accessTypeId": "by_qualifiers",
+      "qualifiers": [
+        {
+          "id": 1,
+          "accessTypeId": "any"
+        }
+      ]
+    }
+  ]
 }

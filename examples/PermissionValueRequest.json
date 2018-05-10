@@ -1,0 +1,10 @@
+{
+  "id": 1,
+  "accessTypeId": "by_qualifiers",
+  "qualifiers": [
+    {
+      "id": 1,
+      "accessTypeId": "any"
+    }
+  ]
+}

@@ -413,11 +413,28 @@ TemplateRequest:
       type: string
       maxLength: 255
   example: !include examples/TemplateRequest.json
+
+QualifierRequest:
+  type: object
+  properties:
+    id: integer
+    accessTypeId: string
+  example: !include examples/QualifierRequest.json
+PermissionValueRequest:
+  type: object
+  properties:
+    id: integer
+    accessTypeId: string
+    qualifiers?: QualifierRequest[]
+  example: !include examples/PermissionValueRequest.json
 RoleRequest:
   type: object
   properties:
     name: string
+    templateIds: integer[]
+    permissionValues: PermissionValueRequest[]
   example: !include examples/RoleRequest.json
+
 DocumentVersionRequest:
   type: object
   properties:
