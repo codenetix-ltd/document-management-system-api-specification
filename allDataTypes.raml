@@ -222,9 +222,12 @@ Log:
     user: User
     action: string
     link: Link
-    type:
+    referenceType:
       type: string
       enum: ['user', 'document', 'template', 'label']
+    referenceId:
+      type: integer
+      example: 1
   example: !include examples/Log.json
 
 

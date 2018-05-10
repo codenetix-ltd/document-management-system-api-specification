@@ -17,7 +17,8 @@
       "title": "Login",
       "url": "http://example.com/user/41959922"
     },
-    "type": "user"
+    "referenceType": "user",
+    "referenceId": 1
   },
   {
     "createdAt": 26409749,
@@ -37,7 +38,8 @@
       "title": "Logout",
       "url": "http://example.com/user/41959922"
     },
-    "type": "user"
+    "referenceType": "user",
+    "referenceId": 1
   },
   {
     "createdAt": 36268498,
@@ -57,6 +59,7 @@
       "title": "Created",
       "url": "http://example.com/label/41959922"
     },
-    "type": "label"
+    "referenceType": "label",
+    "referenceId": 1
   }
 ]

@@ -16,5 +16,6 @@
     "title": "Login",
     "url": "http://example.com/user/41959922"
   },
-  "type": "user"
+  "referenceType": "user",
+  "referenceId": 1
 }
