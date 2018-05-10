@@ -72,6 +72,34 @@ resourceTypes:
       responseItem: Document
       postRequestItem: DocumentPostRequest
       examplesJson: !include examples/Documents.json
+  delete:
+    queryParameters:
+      ids:
+        description: Delete selected elements
+        type: string
+        example: 1,2
+        default: 1,2
+    responses:
+      204:
+        description: Deleted
+  patch:
+    queryParameters:
+      ids:
+        description: Update selected elements
+        type: string
+        default: 1,2
+        example: 1,2
+    body:
+      application/json:
+        type: object[] #TODO raml mock can't work with array of concrete object in request
+        example: !include examples/DocumentPatchRequests.json
+    responses:
+      200:
+        description: Updated
+        body:
+          application/json:
+            type: Document[]
+            example: !include examples/Documents.json
   /{id}:
     uriParameters:
       id:
