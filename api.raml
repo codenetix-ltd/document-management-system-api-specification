@@ -72,6 +72,41 @@ resourceTypes:
       responseItem: Document
       postRequestItem: DocumentPostRequest
       examplesJson: !include examples/Documents.json
+  get:
+    queryParameters:
+      filters[name]?:
+        type: string
+        example: match
+      filters[id]?:
+        type: integer
+        example: 1
+      filters[ids]?:
+        type: string
+        example: 1,2,3
+      filters[ownerId]?:
+        type: integer
+        example: 1
+      filters[templateIds]?:
+        type: string
+        example: 1,2,3
+      filters[labelIds]?:
+        type: string
+        example: 1,2,3
+      filters[archived]?:
+        type: boolean
+        example: true
+      filters[createdAt.from]?:
+        type: integer
+        example: 1527231850
+      filters[createdAt.to]?:
+        type: integer
+        example: 1527231850
+      filters[updatedAt.from]?:
+        type: integer
+        example: 1527231850
+      filters[updatedAt.to]?:
+        type: integer
+        example: 1527231850
   delete:
     queryParameters:
       ids:
@@ -91,7 +126,7 @@ resourceTypes:
         example: 1,2
     body:
       application/json:
-        type: object[] #TODO raml mock can't work with array of concrete object in request
+        type: object[] #raml mock can't work with array of concrete object in request
         example: !include examples/DocumentPatchRequests.json
     responses:
       200:
