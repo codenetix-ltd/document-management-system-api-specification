@@ -1,151 +1,32 @@
 [
   {
-    "id": 93394497,
-    "type": {
-      "id": 1,
-      "name": "Boolean",
-      "machineName": "boolean"
-    },
-    "name": "Fantastic Fresh Bacon",
+    "id": 89268332,
+    "typeId": 1,
+    "name": "solid state",
     "data": {
       "rows": [
         {
-          "name": "drive",
+          "name": "Valley",
           "columns": [
             {
-              "id": 27735894,
-              "isLocked": true,
-              "type": {
-                "id": 5,
-                "name": "Table",
-                "machineName": "table"
-              }
-            }
-          ]
-        }
-      ],
-      "columns": [
-        {
-          "name": "back up",
-          "type": {
-            "id": 2,
-            "name": "Value with deviations",
-            "machineName": "valueWithDeviations"
-          }
-        }
-      ]
-    }
-  },
-  {
-    "id": 91499739,
-    "type": {
-      "id": 4,
-      "name": "Numeric",
-      "machineName": "numeric"
-    },
-    "name": "Tasty",
-    "data": {
-      "rows": [
-        {
-          "name": "empower",
-          "columns": [
-            {
-              "id": 70609841,
-              "isLocked": true,
-              "type": {
-                "id": 4,
-                "name": "Numeric",
-                "machineName": "numeric"
-              }
+              "id": 12999199,
+              "isLocked": false,
+              "typeId": 1
             },
             {
-              "id": 91876544,
-              "isLocked": true,
-              "type": {
-                "id": 3,
-                "name": "String",
-                "machineName": "string"
-              }
-            }
-          ]
-        },
-        {
-          "name": "Incredible",
-          "columns": [
-            {
-              "id": 34477902,
-              "isLocked": true,
-              "type": {
-                "id": 3,
-                "name": "String",
-                "machineName": "string"
-              }
-            },
-            {
-              "id": 68861267,
-              "isLocked": true,
-              "type": {
-                "id": 2,
-                "name": "Value with deviations",
-                "machineName": "valueWithDeviations"
-              }
+              "id": 70946490,
+              "isLocked": false,
+              "typeId": 1
             }
           ]
         }
       ],
-      "columns": [
+      "headers": [
         {
-          "name": "SQL",
-          "type": {
-            "id": 5,
-            "name": "Table",
-            "machineName": "table"
-          }
+          "name": "Turkmenistan"
         },
         {
-          "name": "deposit",
-          "type": {
-            "id": 3,
-            "name": "String",
-            "machineName": "string"
-          }
-        }
-      ]
-    }
-  },
-  {
-    "id": 16778097,
-    "type": {
-      "id": 2,
-      "name": "Value with deviations",
-      "machineName": "valueWithDeviations"
-    },
-    "name": "Lead",
-    "data": {
-      "rows": [
-        {
-          "name": "Response",
-          "columns": [
-            {
-              "id": 39083802,
-              "isLocked": true,
-              "type": {
-                "id": 5,
-                "name": "Table",
-                "machineName": "table"
-              }
-            }
-          ]
-        }
-      ],
-      "columns": [
-        {
-          "name": "incentivize",
-          "type": {
-            "id": 1,
-            "name": "Boolean",
-            "machineName": "boolean"
-          }
+          "name": "Check"
         }
       ]
     }

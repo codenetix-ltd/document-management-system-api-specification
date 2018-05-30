@@ -7,7 +7,9 @@ Attribute:
     id:
       type: integer
       example: 1
-    type: Type
+    typeId:
+      type: integer
+      example: 1
     name:
       type: string
       example: 'Example attribute 1'
@@ -245,7 +247,9 @@ RowColumn:
       displayName: Is Locked
       example: true
       description: True if the column is locked, False otherwise
-    type: Type
+    typeId:
+      type: integer
+      example: 1
 Row:
   type: object
   properties:
@@ -253,19 +257,17 @@ Row:
       type: string
       example: 'Example row 1'
     columns: RowColumn[]
-Column:
+Header:
   type: object
   properties:
     name:
       type: string
-      example: 'Example column 1'
-    type:
-      type: Type
+      example: 'Example header 1'
 Table:
   type: object
   properties:
     rows: Row[]
-    columns: Column[]
+    headers: Header[]
 Value:
   type: object
   discriminator: type
@@ -337,7 +339,6 @@ AttributeRequest:
     name:
       type: string
       maxLength: 255
-    typeId: integer
     data?: TableRequest
   example: !include examples/AttributeRequest.json
 AuthRequest:
@@ -393,18 +394,18 @@ RowRequest:
 RowColumnRequest:
   type: object
   properties:
+    id?: integer
     typeId: integer
     isLocked: boolean
-ColumnRequest:
+HeaderRequest:
   type: object
   properties:
     name: string
-    typeId: integer
 TableRequest:
   type: object
   properties:
     rows: RowRequest[]
-    columns: ColumnRequest[]
+    headers: HeaderRequest[]
 
 TemplateRequest:
   type: object

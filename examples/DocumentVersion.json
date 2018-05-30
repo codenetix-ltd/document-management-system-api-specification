@@ -7,64 +7,33 @@
     "name": "Example template",
     "attributes": [
       {
-        "id": 1234501,
-        "type": {
-          "id": 3,
-          "name": "String",
-          "machineName": "string"
-        },
-        "name": "Example attribute 1"
-      },
-      {
-        "id": 1234502,
-        "type": {
-          "id": 5,
-          "name": "Table",
-          "machineName": "table"
-        },
-        "name": "Example attribute 2",
+        "id": 89268332,
+        "typeId": 1,
+        "name": "solid state",
         "data": {
           "rows": [
             {
-              "name": "Common",
+              "name": "Valley",
               "columns": [
                 {
-                  "id": 1234503,
-                  "isLocked": true,
-                  "type": {
-                    "id": 3,
-                    "name": "String",
-                    "machineName": "string"
-                  }
+                  "id": 12999199,
+                  "isLocked": false,
+                  "typeId": 1
                 },
                 {
-                  "id": 1234504,
+                  "id": 70946490,
                   "isLocked": false,
-                  "type": {
-                    "id": 4,
-                    "name": "Numeric",
-                    "machineName": "numeric"
-                  }
+                  "typeId": 1
                 }
               ]
             }
           ],
-          "columns": [
+          "headers": [
             {
-              "name": "Column title 1",
-              "type": {
-                "id": 3,
-                "name": "String",
-                "machineName": "string"
-              }
+              "name": "Turkmenistan"
             },
             {
-              "name": "Column title 2",
-              "type": {
-                "id": 4,
-                "name": "Numeric",
-                "machineName": "numeric"
-              }
+              "name": "Check"
             }
           ]
         }
