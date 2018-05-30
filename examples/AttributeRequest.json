@@ -1,16 +1,17 @@
 {
   "name": "AI",
-  "typeId": 20666287,
-  "table": {
+  "data": {
     "rows": [
       {
         "name": "zero defect",
         "columns": [
           {
+            "id": 2,
             "typeId": 28404938,
             "isLocked": false
           },
           {
+            "id": 3,
             "typeId": 28951514,
             "isLocked": true
           }
@@ -30,14 +31,12 @@
         ]
       }
     ],
-    "columns": [
+    "headers": [
       {
-        "name": "Music",
-        "typeId": 63991392
+        "name": "Music"
       },
       {
-        "name": "Haven",
-        "typeId": 71082507
+        "name": "Haven"
       }
     ]
   }

@@ -3,129 +3,33 @@
   "name": "Producer",
   "attributes": [
     {
-      "id": 91061549,
-      "type": {
-        "id": 72541709,
-        "name": "String",
-        "machineName": "valueWithDeviations"
-      },
-      "name": "red",
+      "id": 89268332,
+      "typeId": 1,
+      "name": "solid state",
       "data": {
         "rows": [
           {
-            "name": "Credit Card Account",
+            "name": "Valley",
             "columns": [
               {
-                "id": 68518216,
+                "id": 12999199,
                 "isLocked": false,
-                "type": {
-                  "id": 69837304,
-                  "name": "String",
-                  "machineName": "table"
-                }
+                "typeId": 1
               },
               {
-                "id": 80885718,
-                "isLocked": true,
-                "type": {
-                  "id": 97545653,
-                  "name": "String",
-                  "machineName": "valueWithDeviations"
-                }
-              }
-            ]
-          },
-          {
-            "name": "Jewelery",
-            "columns": [
-              {
-                "id": 89748369,
+                "id": 70946490,
                 "isLocked": false,
-                "type": {
-                  "id": 61541050,
-                  "name": "Value with deviations",
-                  "machineName": "table"
-                }
-              },
-              {
-                "id": 99781701,
-                "isLocked": false,
-                "type": {
-                  "id": 24920761,
-                  "name": "String",
-                  "machineName": "table"
-                }
+                "typeId": 1
               }
             ]
           }
         ],
-        "columns": [
+        "headers": [
           {
-            "name": "Avon",
-            "type": {
-              "id": 12679938,
-              "name": "Value with deviations",
-              "machineName": "boolean"
-            }
-          }
-        ]
-      }
-    },
-    {
-      "id": 30890664,
-      "type": {
-        "id": 75171814,
-        "name": "String",
-        "machineName": "string"
-      },
-      "name": "Isle",
-      "data": {
-        "rows": [
-          {
-            "name": "Iranian Rial",
-            "columns": [
-              {
-                "id": 66296303,
-                "isLocked": true,
-                "type": {
-                  "id": 3,
-                  "name": "String",
-                  "machineName": "string"
-                }
-              }
-            ]
+            "name": "Turkmenistan"
           },
           {
-            "name": "Lakes",
-            "columns": [
-              {
-                "id": 81463245,
-                "isLocked": true,
-                "type": {
-                  "id": 4,
-                  "name": "Numeric",
-                  "machineName": "numeric"
-                }
-              }
-            ]
-          }
-        ],
-        "columns": [
-          {
-            "name": "relationships",
-            "type": {
-              "id": 5,
-              "name": "Table",
-              "machineName": "table"
-            }
-          },
-          {
-            "name": "Refined",
-            "type": {
-              "id": 3,
-              "name": "String",
-              "machineName": "string"
-            }
+            "name": "Check"
           }
         ]
       }
