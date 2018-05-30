@@ -26,7 +26,7 @@ services:
     volumes:
       - .:/schema
 
-  proxy:
+  docs_mock_proxy:
     image: codenetix/nginx-reverse-proxy
     ports:
       - 80:80
