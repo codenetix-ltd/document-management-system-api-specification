@@ -5,7 +5,8 @@ stages:
   - deploy_schema
 
 variables:
-  CONTAINER_IMAGE: $CI_REGISTRY_IMAGE:$CI_BUILD_REF_NAME
+  DOC_IMAGE: $CI_REGISTRY_IMAGE/documentation:$CI_BUILD_REF_NAME
+  MOCK_IMAGE: $CI_REGISTRY_IMAGE/mock:$CI_BUILD_REF_NAME
 
 before_script:
   - docker login -u gitlab-ci-token -p $CI_BUILD_TOKEN $CI_REGISTRY
@@ -13,23 +14,11 @@ before_script:
 build:
   stage: build
   script:
-    - docker build --pull -t $CONTAINER_IMAGE .
-    - docker push $CONTAINER_IMAGE
+    - docker build --pull -f ./documentation/Dockerfile -t $DOC_IMAGE .
+    - docker push $DOC_IMAGE
+    - docker build --pull -f ./mock/Dockerfile -t $MOCK_IMAGE .
+    - docker push $MOCK_IMAGE
   only:
     - master
-  tags:
-    - docker-build
-
-deploy_schema:
-  variables:
-    GIT_STRATEGY: none
-  stage: deploy_schema
-  only:
-    - master
-  script:
-    - docker run --env RANCHER_URL="http://rancher.codenetix.com/v1/projects/1a17584" --env RANCHER_ACCESS_KEY="$RANCHER_ACCESS_KEY" --env RANCHER_SECRET_KEY="$RANCHER_SECRET_KEY" --env RANCHER_STACK_ID="1st133" --env RANCHER_STACK_NAME="Default" --env RANCHER_SERVICE_NAME="schema" mildberrydigital/rancher-remote-upgrade:latest schema
-    - docker run --env RANCHER_URL="http://rancher.codenetix.com/v1/projects/1a17584" --env RANCHER_ACCESS_KEY="$RANCHER_ACCESS_KEY" --env RANCHER_SECRET_KEY="$RANCHER_SECRET_KEY" --env RANCHER_STACK_ID="1st133" --env RANCHER_STACK_NAME="Default" --env RANCHER_SERVICE_NAME="mock" mildberrydigital/rancher-remote-upgrade:latest mock
-    - docker run --env RANCHER_URL="http://rancher.codenetix.com/v1/projects/1a17584" --env RANCHER_ACCESS_KEY="$RANCHER_ACCESS_KEY" --env RANCHER_SECRET_KEY="$RANCHER_SECRET_KEY" --env RANCHER_STACK_ID="1st133" --env RANCHER_STACK_NAME="Default" --env RANCHER_SERVICE_NAME="documentation" mildberrydigital/rancher-remote-upgrade:latest documentation
-    - docker run --env RANCHER_URL="http://rancher.codenetix.com/v1/projects/1a17584" --env RANCHER_ACCESS_KEY="$RANCHER_ACCESS_KEY" --env RANCHER_SECRET_KEY="$RANCHER_SECRET_KEY" --env RANCHER_STACK_ID="1st133" --env RANCHER_STACK_NAME="Default" --env RANCHER_SERVICE_NAME="dms-proxy" mildberrydigital/rancher-remote-upgrade:latest dms-proxy
   tags:
     - docker-build
