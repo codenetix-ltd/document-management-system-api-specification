@@ -5,11 +5,11 @@ stages:
   - deploy_schema
 
 variables:
-  DOC_IMAGE: $CI_REGISTRY_IMAGE/documentation:$CI_BUILD_REF_NAME
-  MOCK_IMAGE: $CI_REGISTRY_IMAGE/mock:$CI_BUILD_REF_NAME
+  DOC_IMAGE: codenetix/laravel-dms-documentation:$CI_BUILD_REF_NAME
+  MOCK_IMAGE: codenetix/laravel-dms-mock:$CI_BUILD_REF_NAME
 
 before_script:
-  - docker login -u gitlab-ci-token -p $CI_BUILD_TOKEN $CI_REGISTRY
+  - docker login -u $DOCKER_HUB_USER -p $DOCKER_HUB_PASSWORD
 
 build:
   stage: build
