@@ -1,7 +1,7 @@
 version: "3"
 services:
 
-  documentation_dev:
+  documentation-dev:
     image: registry.codenetix.com/documentation/documentation:master
     volumes:
       - .:/schema
@@ -26,7 +26,7 @@ services:
     volumes:
       - .:/schema
 
-  docs_mock_proxy:
+  docs-mock-proxy:
     image: codenetix/nginx-reverse-proxy
     ports:
       - 80:80
@@ -44,7 +44,7 @@ services:
       - VH_docs.localhost=http://documentation
       - VH_mock.localhost=http://mock
 
-  testing_mock:
+  testing-mock:
     image: registry.codenetix.com/documentation/testing:master
     links:
       - mock:mock
