@@ -1,6 +1,11 @@
 version: "3"
 services:
   documentation:
-    image: codenetix/laravel-dms-documentation:master
+    build:
+      context: ./
+      dockerfile: ./documentation/Dockerfile
+
   mock:
-    image: codenetix/laravel-dms-mock:master
+    build:
+      context: ./
+      dockerfile: ./mock/Dockerfile
