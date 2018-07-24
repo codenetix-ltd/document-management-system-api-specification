@@ -75,11 +75,11 @@ post:
       example: user,type
   body:
     application/json:
-      type: <<postRequestItem>>
+      <<postRequestItem>>
   responses:
     201:
       description:
-        Creted item
+        Created item
       body:
         application/json:
           <<responseItem>>

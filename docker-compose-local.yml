@@ -1,0 +1,9 @@
+version: "3"
+services:
+  documentation:
+    ports:
+      - 8001:80
+
+  mock:
+    ports:
+      - 8000:80

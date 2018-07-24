@@ -1,0 +1,19 @@
+{
+  "id": 1,
+  "userId": 23,
+  "documentId": 45,
+  "body": "lorem ipsum",
+  "createdAt": 95152885,
+  "updatedAt": 95673364,
+  "children": [
+    {
+      "id": 123,
+      "userId": 23,
+      "documentId": 45,
+      "body": "lorem ipsum",
+      "parentId": 1,
+      "createdAt": 95152885,
+      "updatedAt": 95673364
+    }
+  ]
+}
