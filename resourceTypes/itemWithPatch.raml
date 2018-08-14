@@ -53,3 +53,28 @@ delete:
     204:
       description:
         No content
+patch:
+  queryParameters:
+    with?:
+      description: Expand embeded entityes
+      type: string
+      example: user,type
+  body:
+    application/json:
+      <<patchRequestItem>>
+  responses:
+    200:
+      description:
+        Updated item
+      body:
+        application/json:
+          type: object
+          properties:
+            data:
+              <<responseItem>>
+            meta: object
+          example: |
+            {
+              "meta": <<metaExample>>,
+              "data": <<example>>
+            }

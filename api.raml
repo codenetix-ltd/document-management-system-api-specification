@@ -11,6 +11,7 @@ resourceTypes:
   PaginationCollection: !include resourceTypes/paginationCollection.raml
   Collection: !include resourceTypes/collection.raml
   Item: !include resourceTypes/item.raml
+  ItemWithPatch: !include resourceTypes/itemWithPatch.raml
 
 /users:
   type:
@@ -23,6 +24,8 @@ resourceTypes:
       Item:
         responseItem: User
         putRequestItem: UserPutRequest
+        metaExample: '{}'
+        example: !include examples/User.json
   /{id}:
     uriParameters:
       id:
@@ -33,7 +36,8 @@ resourceTypes:
       Item:
         responseItem: User
         putRequestItem: UserPutRequest
-
+        metaExample: '{}'
+        example: !include examples/User.json
 /templates:
   type:
     PaginateCollection:
@@ -50,6 +54,8 @@ resourceTypes:
       Item:
         responseItem: Template
         putRequestItem: TemplateRequest
+        metaExample: '{"documentsLinked": 10}'
+        example: !include examples/Template.json
     /attributes:
       type:
         PaginateCollection:
@@ -66,6 +72,8 @@ resourceTypes:
           Item:
             responseItem: Attribute
             putRequestItem: AttributeRequest
+            metaExample: '{}'
+            example: !include examples/Attribute.json
 /documents:
   type:
     PaginateCollection:
@@ -142,25 +150,12 @@ resourceTypes:
         example: 1
         default: 1
     type:
-      Item:
+      ItemWithPatch:
         responseItem: Document
         putRequestItem: DocumentPutRequest
-    patch:
-      queryParameters:
-        with?:
-          description: Expand embeded entityes
-          type: string
-          example: user,type
-      body:
-        application/json:
-          DocumentPatchRequest
-      responses:
-        200:
-          description:
-            Updated item
-          body:
-            application/json:
-              Document
+        patchRequestItem: DocumentPatchRequest
+        metaExample: '{}'
+        example: !include examples/Document.json
     /actualVersion:
       post:
         body:
@@ -195,6 +190,8 @@ resourceTypes:
       Item:
         responseItem: DocumentVersion
         putRequestItem: DocumentVersionRequest
+        metaExample: '{}'
+        example: !include examples/DocumentVersion.json
 
 /types:
   type:
@@ -218,6 +215,8 @@ resourceTypes:
       Item:
         responseItem: Label
         putRequestItem: LabelRequest
+        metaExample: '{}'
+        example: !include examples/Label.json
 
 /roles:
   type:
@@ -235,6 +234,8 @@ resourceTypes:
       Item:
         responseItem: Role
         putRequestItem: RoleRequest
+        metaExample: '{}'
+        example: !include examples/Role.json
 
 /oauth:
   /token:
