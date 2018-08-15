@@ -13,7 +13,7 @@ Attribute:
     name:
       type: string
       example: 'Example attribute 1'
-    data?: Table
+    attributeData?: Table
   example: !include examples/Attribute.json
 Auth:
   type: object
@@ -339,7 +339,7 @@ AttributeRequest:
     name:
       type: string
       maxLength: 255
-    data?: TableRequest
+    attributeData?: TableRequest
   example: !include examples/AttributeRequest.json
 AuthRequest:
     type: object

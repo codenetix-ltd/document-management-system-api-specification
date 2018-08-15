@@ -15,7 +15,7 @@
             "id": 89268332,
             "typeId": 1,
             "name": "solid state",
-            "data": {
+            "attributeData": {
               "rows": [
                 {
                   "name": "Valley",
@@ -128,7 +128,7 @@
             "id": 89268332,
             "typeId": 1,
             "name": "solid state",
-            "data": {
+            "attributeData": {
               "rows": [
                 {
                   "name": "Valley",
@@ -241,7 +241,7 @@
             "id": 89268332,
             "typeId": 1,
             "name": "solid state",
-            "data": {
+            "attributeData": {
               "rows": [
                 {
                   "name": "Valley",
