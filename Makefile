@@ -6,3 +6,6 @@ run_mock_dev:
 	docker run -d -v $(shell pwd):/schema --name dms_mock -p 8002:80 registry.codenetix.com/documentation/mock:master
 mock_update:
 	docker restart dms_mock
+update:
+	make doc_update
+	make mock_update

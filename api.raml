@@ -12,6 +12,7 @@ resourceTypes:
   Collection: !include resourceTypes/collection.raml
   Item: !include resourceTypes/item.raml
   ItemWithPatch: !include resourceTypes/itemWithPatch.raml
+  Post: !include resourceTypes/post.raml
 
 /users:
   type:
@@ -19,6 +20,8 @@ resourceTypes:
       responseItem: User
       postRequestItem: UserPostRequest
       examplesJson: !include examples/Users.json
+      metaExample: '{}'
+      example: !include examples/User.json
   /current:
     type:
       Item:
@@ -44,6 +47,8 @@ resourceTypes:
       responseItem: Template
       postRequestItem: TemplateRequest
       examplesJson: !include examples/Templates.json
+      metaExample: '{}'
+      example: !include examples/Template.json
   /{id}:
     uriParameters:
       id:
@@ -62,6 +67,8 @@ resourceTypes:
           responseItem: Attribute
           postRequestItem: AttributeRequest
           examplesJson: !include examples/Attributes.json
+          metaExample: '{}'
+          example: !include examples/Attribute.json
       /{attributeId}:
         uriParameters:
           attributeId:
@@ -80,6 +87,8 @@ resourceTypes:
       responseItem: Document
       postRequestItem: DocumentPostRequest
       examplesJson: !include examples/Documents.json
+      metaExample: '{}'
+      example: !include examples/Document.json
   get:
     queryParameters:
       filters[name]?:
@@ -180,6 +189,8 @@ resourceTypes:
       responseItem: DocumentVersion
       postRequestItem: DocumentVersionRequest
       examplesJson: !include examples/DocumentVersions.json
+      metaExample: '{}'
+      example: !include examples/DocumentVersion.json
   /{versionId}:
     uriParameters:
       versionId:
@@ -205,6 +216,8 @@ resourceTypes:
       responseItem: Label
       postRequestItem: LabelRequest
       examplesJson: !include examples/Labels.json
+      metaExample: '{}'
+      example: !include examples/Label.json
   /{id}:
     uriParameters:
       id:
@@ -224,6 +237,8 @@ resourceTypes:
       responseItem: Role
       postRequestItem: RoleRequest
       examplesJson: !include examples/Roles.json
+      metaExample: '{}'
+      example: !include examples/Role.json
   /{id}:
     uriParameters:
       id:
@@ -312,3 +327,7 @@ resourceTypes:
     PaginationCollection:
       responseItem: Log
       examplesJson: !include examples/Logs.json
+
+#/document-versions:
+#  type:
+#    Post

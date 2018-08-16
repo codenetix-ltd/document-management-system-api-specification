@@ -82,4 +82,13 @@ post:
         Creted item
       body:
         application/json:
-          <<responseItem>>
+          type: object
+          properties:
+            data:
+              <<responseItem>>
+            meta: object
+          example: |
+            {
+              "meta": <<metaExample>>,
+              "data": <<example>>
+            }
