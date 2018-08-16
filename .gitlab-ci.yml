@@ -29,7 +29,7 @@ deploy_dev:
   only:
     - master
   script:
-    - kubectl set env deploy/dms-documentation-deployment DEPLOY_DATE="$(date)" -n dms-dev
-    - kubectl set env deploy/dms-mock-deployment DEPLOY_DATE="$(date)" -n dms-dev
+    - kubectl set env deployment.apps/dms-documentation-deployment DEPLOY_DATE="$(date)" -n dms-dev
+    - kubectl set env deployment.apps/dms-mock-deployment DEPLOY_DATE="$(date)" -n dms-dev
   tags:
     - docker-build
