@@ -1,0 +1,17 @@
+#%RAML 1.0 ResourceType
+post:
+  queryParameters:
+    with?:
+      description: Expand embeded entityes
+      type: string
+      example: user,type
+  body:
+    application/json:
+      type: <<postRequestItem>>
+  responses:
+    201:
+      description:
+        Creted item
+      body:
+        application/json:
+          <<responseItem>>

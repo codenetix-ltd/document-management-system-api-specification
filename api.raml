@@ -7,7 +7,7 @@ baseUri: http://dms.codenetix.com/{version}
 types: !include allDataTypes.raml
 
 resourceTypes:
-  PaginateCollection: !include resourceTypes/paginateCollection.raml
+  PaginationAndPost: !include resourceTypes/paginationAndPost.raml
   PaginationCollection: !include resourceTypes/paginationCollection.raml
   Collection: !include resourceTypes/collection.raml
   Item: !include resourceTypes/item.raml
@@ -15,7 +15,7 @@ resourceTypes:
 
 /users:
   type:
-    PaginateCollection:
+    PaginationAndPost:
       responseItem: User
       postRequestItem: UserPostRequest
       examplesJson: !include examples/Users.json
@@ -40,7 +40,7 @@ resourceTypes:
         example: !include examples/User.json
 /templates:
   type:
-    PaginateCollection:
+    PaginationAndPost:
       responseItem: Template
       postRequestItem: TemplateRequest
       examplesJson: !include examples/Templates.json
@@ -58,7 +58,7 @@ resourceTypes:
         example: !include examples/Template.json
     /attributes:
       type:
-        PaginateCollection:
+        PaginationAndPost:
           responseItem: Attribute
           postRequestItem: AttributeRequest
           examplesJson: !include examples/Attributes.json
@@ -76,7 +76,7 @@ resourceTypes:
             example: !include examples/Attribute.json
 /documents:
   type:
-    PaginateCollection:
+    PaginationAndPost:
       responseItem: Document
       postRequestItem: DocumentPostRequest
       examplesJson: !include examples/Documents.json
@@ -176,7 +176,7 @@ resourceTypes:
       example: 1
       default: 1
   type:
-    PaginateCollection:
+    PaginationAndPost:
       responseItem: DocumentVersion
       postRequestItem: DocumentVersionRequest
       examplesJson: !include examples/DocumentVersions.json
@@ -201,7 +201,7 @@ resourceTypes:
 
 /labels:
   type:
-    PaginateCollection:
+    PaginationAndPost:
       responseItem: Label
       postRequestItem: LabelRequest
       examplesJson: !include examples/Labels.json
@@ -220,7 +220,7 @@ resourceTypes:
 
 /roles:
   type:
-    PaginateCollection:
+    PaginationAndPost:
       responseItem: Role
       postRequestItem: RoleRequest
       examplesJson: !include examples/Roles.json
