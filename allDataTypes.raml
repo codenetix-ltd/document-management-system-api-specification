@@ -340,6 +340,8 @@ AttributeRequest:
       type: string
       maxLength: 255
     attributeData?: TableRequest
+    typeId: integer
+    templateId: integer
   example: !include examples/AttributeRequest.json
 AuthRequest:
     type: object
@@ -436,7 +438,7 @@ RoleRequest:
     permissionValues?: PermissionValueRequest[]
   example: !include examples/RoleRequest.json
 
-DocumentVersionRequest:
+DocumentVersionBaseRequest:
   type: object
   properties:
     name: string
@@ -446,12 +448,17 @@ DocumentVersionRequest:
     comment: string
     attributeValues: ValueUnion[]
   example: !include examples/DocumentVersionRequest.json
+DocumentVersionRequest:
+  type: DocumentVersionBaseRequest
+  properties:
+    documentId: integer
+  example: !include examples/DocumentVersionRequest.json
 DocumentPostRequest:
   type: object
   properties:
     ownerId: integer
     substituteDocumentId?: integer
-    actualVersion: DocumentVersionRequest
+    actualVersion: DocumentVersionBaseRequest
   example: !include examples/DocumentPostRequest.json
 DocumentPutRequest:
   type: object
@@ -459,7 +466,7 @@ DocumentPutRequest:
     createNewVersion: boolean
     ownerId: integer
     substituteDocumentId?: integer
-    actualVersion: DocumentVersionRequest
+    actualVersion: DocumentVersionBaseRequest
   example: !include examples/DocumentPutRequest.json
 DocumentPatchRequest:
   type: object
