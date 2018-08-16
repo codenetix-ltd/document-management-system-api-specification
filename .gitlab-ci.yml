@@ -8,17 +8,28 @@ variables:
   DOC_IMAGE: codenetix/laravel-dms-documentation:$CI_BUILD_REF_NAME
   MOCK_IMAGE: codenetix/laravel-dms-mock:$CI_BUILD_REF_NAME
 
-before_script:
-  - docker login -u $DOCKER_HUB_USER -p $DOCKER_HUB_PASSWORD
-
 build:
   stage: build
   script:
+    - docker login -u $DOCKER_HUB_USER -p $DOCKER_HUB_PASSWORD
     - docker build --pull -f ./documentation/Dockerfile -t $DOC_IMAGE .
     - docker push $DOC_IMAGE
     - docker build --pull -f ./mock/Dockerfile -t $MOCK_IMAGE .
     - docker push $MOCK_IMAGE
   only:
     - master
+  tags:
+    - docker-build
+
+deploy_dev:
+  image: codenetix/kubectl
+  variables:
+    GIT_STRATEGY: none
+  stage: deploy_schema
+  only:
+    - master
+  script:
+    - kubectl set env deploy/dms-documentation-deployment DEPLOY_DATE="$(date)" -n dms-dev
+    - kubectl set env deploy/dms-mock-deployment DEPLOY_DATE="$(date)" -n dms-dev
   tags:
     - docker-build
