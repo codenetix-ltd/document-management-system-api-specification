@@ -2,7 +2,7 @@
 
 title: DMS API
 version: v1
-baseUri: http://dms.codenetix.com/{version}
+baseUri: https://mocksvc.mulesoft.com/mocks/8dfe53b2-3d8b-4567-9bb3-47803f7d9d47/{version} # baseUri: http://dms.codenetix.com/{version}
 
 types: !include allDataTypes.raml
 
@@ -66,6 +66,17 @@ resourceTypes:
           Item:
             responseItem: Attribute
             putRequestItem: AttributeRequest
+/comments/{commentId}/children:
+  uriParameters:
+    commentId:
+      type: integer
+      example: 1
+      default: 1
+  type:
+    PaginationCollection:
+      responseItem: Comment
+      examplesJson: !include examples/Childrens.json
+
 /documents:
   type:
     PaginateCollection:
@@ -192,12 +203,16 @@ resourceTypes:
           Item:
             responseItem: Comment
             putRequestItem: Comment
-
       /tree:
         type:
           PaginationCollection:
             responseItem: Comment
             examplesJson: !include examples/Tree.json
+      /list:
+        type:
+          PaginationCollection:
+            responseItem: Comment
+            examplesJson: !include examples/CommentsList.json
 
 /documents/{id}/versions:
   uriParameters:

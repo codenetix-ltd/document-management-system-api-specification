@@ -237,23 +237,24 @@ Comment:
   properties:
     id: integer
     userId: integer
-    documentId: integer
+    commentableId: integer
+    commentableType: string
     body:
       type: string
       minLength: 1
-      maxLength: 255
+      maxLength: 7999
     parentId?:
       type: integer
     children?:
       type: object[]
       description: Array of child comments
-    mentionedUsers?:
-      type: array
-      items: User
     createdAt:
       type: integer
       example: 1524043120
     updatedAt:
+      type: integer
+      example: 1524043120
+    deletedAt?:
       type: integer
       example: 1524043120
   example: !include examples/RootComment.json

@@ -2,7 +2,8 @@
   {
     "id": 123,
     "userId": 23,
-    "documentId": 45,
+    "commentableId": 45,
+    "commentableType": "document",
     "body": "lorem ipsum",
     "parentId": 1,
     "createdAt": 95152885,
@@ -11,20 +12,9 @@
       {
         "id": 123,
         "userId": 23,
-        "documentId": 45,
+        "commentableId": 45,
+        "commentableType": "document",
         "body": "lorem ipsum",
-        "mentionedUsers": [
-          {
-            "id": 33,
-            "fullName": "Jon Doe",
-            "email": "Jon@Doe.com"
-          },
-          {
-            "id": 71,
-            "fullName": "Vova Zema",
-            "email": "VovaZema@gmail.com"
-          }
-        ],
         "parentId": 1,
         "createdAt": 95152885,
         "updatedAt": 95673364,
@@ -32,7 +22,8 @@
           {
             "id": 123,
             "userId": 23,
-            "documentId": 45,
+            "commentableId": 45,
+            "commentableType": "document",
             "body": "lorem ipsum",
             "parentId": 1,
             "createdAt": 95152885,
@@ -41,7 +32,8 @@
               {
                 "id": 123,
                 "userId": 23,
-                "documentId": 45,
+                "commentableId": 45,
+                "commentableType": "document",
                 "body": "lorem ipsum",
                 "parentId": 1,
                 "createdAt": 95152885,
@@ -50,20 +42,9 @@
                   {
                     "id": 123,
                     "userId": 23,
-                    "documentId": 45,
+                    "commentableId": 45,
+                    "commentableType": "document",
                     "body": "lorem ipsum",
-                    "mentionedUsers": [
-                      {
-                        "id": 33,
-                        "fullName": "Jon Doe",
-                        "email": "Jon@Doe.com"
-                      },
-                      {
-                        "id": 71,
-                        "fullName": "Vova Zema",
-                        "email": "VovaZema@gmail.com"
-                      }
-                    ],
                     "parentId": 1,
                     "createdAt": 95152885,
                     "updatedAt": 95673364
@@ -79,7 +60,8 @@
   {
     "id": 123,
     "userId": 23,
-    "documentId": 45,
+    "commentableId": 45,
+    "commentableType": "document",
     "body": "lorem ipsum",
     "parentId": 1,
     "createdAt": 95152885,
@@ -88,7 +70,8 @@
   {
     "id": 123,
     "userId": 23,
-    "documentId": 45,
+    "commentableId": 45,
+    "commentableType": "document",
     "body": "lorem ipsum",
     "parentId": 1,
     "createdAt": 95152885,
@@ -97,20 +80,9 @@
       {
         "id": 123,
         "userId": 23,
-        "documentId": 45,
+        "commentableId": 45,
+        "commentableType": "document",
         "body": "lorem ipsum",
-        "mentionedUsers": [
-          {
-            "id": 33,
-            "fullName": "Jon Doe",
-            "email": "Jon@Doe.com"
-          },
-          {
-            "id": 71,
-            "fullName": "Vova Zema",
-            "email": "VovaZema@gmail.com"
-          }
-        ],
         "parentId": 1,
         "createdAt": 95152885,
         "updatedAt": 95673364,
@@ -118,7 +90,8 @@
           {
             "id": 123,
             "userId": 23,
-            "documentId": 45,
+            "commentableId": 45,
+            "commentableType": "document",
             "body": "lorem ipsum",
             "parentId": 1,
             "createdAt": 95152885,
@@ -131,7 +104,8 @@
   {
     "id": 123,
     "userId": 23,
-    "documentId": 45,
+    "commentableId": 45,
+    "commentableType": "document",
     "body": "lorem ipsum",
     "parentId": 1,
     "createdAt": 95152885,
@@ -140,7 +114,8 @@
   {
     "id": 123,
     "userId": 23,
-    "documentId": 45,
+    "commentableId": 45,
+    "commentableType": "document",
     "body": "lorem ipsum",
     "parentId": 1,
     "createdAt": 95152885,
@@ -149,20 +124,9 @@
   {
     "id": 123,
     "userId": 23,
-    "documentId": 45,
+    "commentableId": 45,
+    "commentableType": "document",
     "body": "lorem ipsum",
-    "mentionedUsers": [
-      {
-        "id": 33,
-        "fullName": "Jon Doe",
-        "email": "Jon@Doe.com"
-      },
-      {
-        "id": 71,
-        "fullName": "Vova Zema",
-        "email": "VovaZema@gmail.com"
-      }
-    ],
     "parentId": 1,
     "createdAt": 95152885,
     "updatedAt": 95673364,
@@ -170,7 +134,8 @@
       {
         "id": 123,
         "userId": 23,
-        "documentId": 45,
+        "commentableId": 45,
+        "commentableType": "document",
         "body": "lorem ipsum",
         "parentId": 1,
         "createdAt": 95152885,

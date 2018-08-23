@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1234,
+    "userId": 23,
+    "commentableId": 45,
+    "commentableType": "document",
+    "body": "lorem ipsum",
+    "parentId": 1,
+    "createdAt": 95152885,
+    "updatedAt": 95673364
+  },
+  {
+    "id": 12123,
+    "userId": 23,
+    "commentableId": 45,
+    "commentableType": "document",
+    "body": "lorem ipsum",
+    "parentId": 1,
+    "createdAt": 95152885,
+    "updatedAt": 95673364
+  },
+  {
+    "id": 12734,
+    "userId": 23,
+    "commentableId": 45,
+    "commentableType": "document",
+    "body": "lorem ipsum",
+    "parentId": 1,
+    "createdAt": 95152885,
+    "updatedAt": 95673364
+  },
+  {
+    "id": 123454,
+    "userId": 23,
+    "commentableId": 45,
+    "commentableType": "document",
+    "body": "lorem ipsum",
+    "parentId": 1,
+    "createdAt": 95152885,
+    "updatedAt": 95673364
+  },
+  {
+    "id": 12434,
+    "userId": 23,
+    "commentableId": 45,
+    "commentableType": "document",
+    "body": "lorem ipsum",
+    "parentId": 1,
+    "createdAt": 95152885,
+    "updatedAt": 95673364
+  }
+]
