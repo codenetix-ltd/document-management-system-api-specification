@@ -336,12 +336,12 @@ TimeStampObject:
 AttributeRequest:
   type: object
   properties:
+    id?: integer
     name:
       type: string
       maxLength: 255
     attributeData?: TableRequest
     typeId: integer
-    templateId: integer
   example: !include examples/AttributeRequest.json
 AuthRequest:
     type: object
@@ -415,6 +415,7 @@ TemplateRequest:
     name:
       type: string
       maxLength: 255
+    attributes: AttributeRequest[]
   example: !include examples/TemplateRequest.json
 
 QualifierRequest:

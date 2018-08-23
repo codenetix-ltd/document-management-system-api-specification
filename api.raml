@@ -70,25 +70,25 @@ resourceTypes:
           metaExample: '{}'
           example: !include examples/Attribute.json
 
-/attributes:
-  type:
-    Post:
-      responseItem: Attribute
-      postRequestItem: AttributeRequest
-      metaExample: '{}'
-      example: !include examples/Attribute.json
-  /{attributeId}:
-    uriParameters:
-      attributeId:
-        type: integer
-        example: 1
-        default: 1
-    type:
-      Item:
-        responseItem: Attribute
-        putRequestItem: AttributeRequest
-        metaExample: '{}'
-        example: !include examples/Attribute.json
+#/attributes:
+#  type:
+#    Post:
+#      responseItem: Attribute
+#      postRequestItem: AttributeRequest
+#      metaExample: '{}'
+#      example: !include examples/Attribute.json
+#  /{attributeId}:
+#    uriParameters:
+#      attributeId:
+#        type: integer
+#        example: 1
+#        default: 1
+#    type:
+#      Item:
+#        responseItem: Attribute
+#        putRequestItem: AttributeRequest
+#        metaExample: '{}'
+#        example: !include examples/Attribute.json
 
 /documents:
   type:

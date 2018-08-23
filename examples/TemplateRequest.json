@@ -1,3 +1,49 @@
 {
-  "name": "deposit"
+  "name": "deposit",
+  "attributes": [
+    {
+      "name": "AI",
+      "attributeData": {
+        "rows": [
+          {
+            "name": "zero defect",
+            "columns": [
+              {
+                "id": 2,
+                "typeId": 28404938,
+                "isLocked": false
+              },
+              {
+                "id": 3,
+                "typeId": 28951514,
+                "isLocked": true
+              }
+            ]
+          },
+          {
+            "name": "monitoring",
+            "columns": [
+              {
+                "typeId": 31392272,
+                "isLocked": true
+              },
+              {
+                "typeId": 34994439,
+                "isLocked": true
+              }
+            ]
+          }
+        ],
+        "headers": [
+          {
+            "name": "Music"
+          },
+          {
+            "name": "Haven"
+          }
+        ]
+      },
+      "typeId": 3
+    }
+  ]
 }
