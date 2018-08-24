@@ -1,0 +1,146 @@
+[
+  {
+    "id": 123,
+    "userId": 23,
+    "commentableId": 45,
+    "commentableType": "document",
+    "body": "lorem ipsum",
+    "parentId": 1,
+    "createdAt": 95152885,
+    "updatedAt": 95673364,
+    "children": [
+      {
+        "id": 123,
+        "userId": 23,
+        "commentableId": 45,
+        "commentableType": "document",
+        "body": "lorem ipsum",
+        "parentId": 1,
+        "createdAt": 95152885,
+        "updatedAt": 95673364,
+        "children": [
+          {
+            "id": 123,
+            "userId": 23,
+            "commentableId": 45,
+            "commentableType": "document",
+            "body": "lorem ipsum",
+            "parentId": 1,
+            "createdAt": 95152885,
+            "updatedAt": 95673364,
+            "children": [
+              {
+                "id": 123,
+                "userId": 23,
+                "commentableId": 45,
+                "commentableType": "document",
+                "body": "lorem ipsum",
+                "parentId": 1,
+                "createdAt": 95152885,
+                "updatedAt": 95673364,
+                "children": [
+                  {
+                    "id": 123,
+                    "userId": 23,
+                    "commentableId": 45,
+                    "commentableType": "document",
+                    "body": "lorem ipsum",
+                    "parentId": 1,
+                    "createdAt": 95152885,
+                    "updatedAt": 95673364
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 123,
+    "userId": 23,
+    "commentableId": 45,
+    "commentableType": "document",
+    "body": "lorem ipsum",
+    "parentId": 1,
+    "createdAt": 95152885,
+    "updatedAt": 95673364
+  },
+  {
+    "id": 123,
+    "userId": 23,
+    "commentableId": 45,
+    "commentableType": "document",
+    "body": "lorem ipsum",
+    "parentId": 1,
+    "createdAt": 95152885,
+    "updatedAt": 95673364,
+    "children": [
+      {
+        "id": 123,
+        "userId": 23,
+        "commentableId": 45,
+        "commentableType": "document",
+        "body": "lorem ipsum",
+        "parentId": 1,
+        "createdAt": 95152885,
+        "updatedAt": 95673364,
+        "children": [
+          {
+            "id": 123,
+            "userId": 23,
+            "commentableId": 45,
+            "commentableType": "document",
+            "body": "lorem ipsum",
+            "parentId": 1,
+            "createdAt": 95152885,
+            "updatedAt": 95673364
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 123,
+    "userId": 23,
+    "commentableId": 45,
+    "commentableType": "document",
+    "body": "lorem ipsum",
+    "parentId": 1,
+    "createdAt": 95152885,
+    "updatedAt": 95673364
+  },
+  {
+    "id": 123,
+    "userId": 23,
+    "commentableId": 45,
+    "commentableType": "document",
+    "body": "lorem ipsum",
+    "parentId": 1,
+    "createdAt": 95152885,
+    "updatedAt": 95673364
+  },
+  {
+    "id": 123,
+    "userId": 23,
+    "commentableId": 45,
+    "commentableType": "document",
+    "body": "lorem ipsum",
+    "parentId": 1,
+    "createdAt": 95152885,
+    "updatedAt": 95673364,
+    "children": [
+      {
+        "id": 123,
+        "userId": 23,
+        "commentableId": 45,
+        "commentableType": "document",
+        "body": "lorem ipsum",
+        "parentId": 1,
+        "createdAt": 95152885,
+        "updatedAt": 95673364
+      }
+    ]
+  }
+]

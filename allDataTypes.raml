@@ -88,7 +88,7 @@ User:
     email:
       type: string
       example: 'John@Doe.com'
-    templatesIds: integer[]
+    templatesIds?: integer[]
   example: !include examples/User.json
 DocumentVersion:
   type: SystemObject
@@ -232,6 +232,32 @@ Log:
       example: 1
   example: !include examples/Log.json
 
+Comment:
+  type: object
+  properties:
+    id: integer
+    userId: integer
+    commentableId: integer
+    commentableType: string
+    body:
+      type: string
+      minLength: 1
+      maxLength: 7999
+    parentId?:
+      type: integer
+    children?:
+      type: object[]
+      description: Array of child comments
+    createdAt:
+      type: integer
+      example: 1524043120
+    updatedAt:
+      type: integer
+      example: 1524043120
+    deletedAt?:
+      type: integer
+      example: 1524043120
+  example: !include examples/RootComment.json
 
 ##################
 ## SYSTEM TYPES ##

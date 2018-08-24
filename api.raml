@@ -69,26 +69,16 @@ resourceTypes:
           examplesJson: !include examples/Attributes.json
           metaExample: '{}'
           example: !include examples/Attribute.json
-
-#/attributes:
-#  type:
-#    Post:
-#      responseItem: Attribute
-#      postRequestItem: AttributeRequest
-#      metaExample: '{}'
-#      example: !include examples/Attribute.json
-#  /{attributeId}:
-#    uriParameters:
-#      attributeId:
-#        type: integer
-#        example: 1
-#        default: 1
-#    type:
-#      Item:
-#        responseItem: Attribute
-#        putRequestItem: AttributeRequest
-#        metaExample: '{}'
-#        example: !include examples/Attribute.json
+/comments/{commentId}/children:
+  uriParameters:
+    commentId:
+      type: integer
+      example: 1
+      default: 1
+  type:
+    PaginationCollection:
+      responseItem: Comment
+      examplesJson: !include examples/Children.json
 
 /documents:
   type:
@@ -179,6 +169,37 @@ resourceTypes:
         PaginationCollection:
           responseItem: DocumentVersion
           examplesJson: !include examples/DocumentVersions.json
+    /comments:
+      type:
+        PaginationAndPost:
+          responseItem: Comment
+          postRequestItem: Comment
+          examplesJson: !include examples/CommentsTree.json
+          metaExample: '{}'
+          example: !include examples/RootComment.json
+      /{commentId}:
+        uriParameters:
+          commentId:
+            description: Сomment identification number
+            type: integer
+            example: 123
+            default: 1
+        type:
+          Item:
+            responseItem: Comment
+            putRequestItem: Comment
+            metaExample: '{}'
+            example: !include examples/RootComment.json
+      /tree:
+        type:
+          PaginationCollection:
+            responseItem: Comment
+            examplesJson: !include examples/Tree.json
+      /list:
+        type:
+          PaginationCollection:
+            responseItem: Comment
+            examplesJson: !include examples/CommentsList.json
 
 /documentVersions:
   type:
