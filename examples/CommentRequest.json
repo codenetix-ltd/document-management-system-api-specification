@@ -1,0 +1,7 @@
+{
+  "userId": 23,
+  "commentableId": 45,
+  "commentableType": "document",
+  "body": "lorem ipsum",
+  "parentId": 1
+}
