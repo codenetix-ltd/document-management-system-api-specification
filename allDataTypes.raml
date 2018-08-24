@@ -523,4 +523,16 @@ DocumentSetActualVersionRequest:
   properties:
     versionId: integer
   example: !include examples/DocumentSetActualVersionRequest.json
-
+CommentRequest:
+  type: object
+  properties:
+    userId: integer
+    commentableId: integer
+    commentableType: string
+    body:
+      type: string
+      minLength: 1
+      maxLength: 7999
+    parentId?:
+      type: integer
+  example: !include examples/CommentRequest.json

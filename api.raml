@@ -69,6 +69,7 @@ resourceTypes:
           examplesJson: !include examples/Attributes.json
           metaExample: '{}'
           example: !include examples/Attribute.json
+
 /comments/{commentId}/children:
   uriParameters:
     commentId:
@@ -173,7 +174,7 @@ resourceTypes:
       type:
         PaginationAndPost:
           responseItem: Comment
-          postRequestItem: Comment
+          postRequestItem: CommentRequest
           examplesJson: !include examples/CommentsTree.json
           metaExample: '{}'
           example: !include examples/RootComment.json
@@ -187,7 +188,7 @@ resourceTypes:
         type:
           Item:
             responseItem: Comment
-            putRequestItem: Comment
+            putRequestItem: CommentRequest
             metaExample: '{}'
             example: !include examples/RootComment.json
       /tree:
