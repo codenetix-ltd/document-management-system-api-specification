@@ -3,6 +3,7 @@
     "id": 26738088,
     "fullName": "Representative",
     "email": "Dustin.Torphy39@gmail.com",
+    "status": 1,
     "templatesIds": [
       17215202,
       21840403
@@ -12,6 +13,7 @@
     "id": 30550545,
     "fullName": "SDR",
     "email": "Jerrold.Murphy@hotmail.com",
+    "status": 1,
     "templatesIds": [
       16611692,
       60335852
@@ -21,6 +23,7 @@
     "id": 28307653,
     "fullName": "deposit",
     "email": "Carmine_Gorczany84@yahoo.com",
+    "status": 1,
     "templatesIds": [
       9365602,
       60059027

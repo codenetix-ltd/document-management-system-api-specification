@@ -24,9 +24,10 @@ resourceTypes:
       example: !include examples/User.json
   /current:
     type:
-      Item:
+      ItemWithPatch:
         responseItem: User
         putRequestItem: UserPutRequest
+        patchRequestItem: UserPatchRequest
         metaExample: '{}'
         example: !include examples/User.json
   /{id}:
@@ -56,9 +57,10 @@ resourceTypes:
         example: 1
         default: 1
     type:
-      Item:
+      ItemWithPatch:
         responseItem: Template
         putRequestItem: TemplateRequest
+        patchRequestItem: TemplatePatchRequest
         metaExample: '{"documentsLinked": 10}'
         example: !include examples/Template.json
     /attributes:

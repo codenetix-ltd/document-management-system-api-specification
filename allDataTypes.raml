@@ -92,6 +92,9 @@ User:
     email:
       type: string
       example: 'John@Doe.com'
+    status:
+      type: integer
+      description: 'ACTIVE - 1, INACTIVE - 0'
     templatesIds?: integer[]
   example: !include examples/User.json
 DocumentVersion:
@@ -415,9 +418,31 @@ UserPutRequest:
       type: string
       minLength: 1
       maxLength: 255
+    status:
+      type: integer
+      description: 'ACTIVE - 1, INACTIVE - 0'
     templatesIds: integer[]
     avatarId: integer
   example: !include examples/UserPutRequest.json
+
+UserPatchRequest:
+  type: object
+  properties:
+    fullName?:
+      type: string
+      minLength: 1
+      maxLength: 255
+    email?:
+      type: string
+      minLength: 1
+      maxLength: 255
+    status?:
+      type: integer
+      description: 'ACTIVE - 1, INACTIVE - 0'
+    templatesIds?: integer[]
+    avatarId?: integer
+  example: !include examples/UserPutRequest.json
+
 RowRequest:
   type: object
   properties:
@@ -449,6 +474,18 @@ TemplateRequest:
       type: integer
       description: 'ACTIVE - 1, INACTIVE - 0'
     attributes: AttributeRequest[]
+  example: !include examples/TemplateRequest.json
+
+TemplatePatchRequest:
+  type: object
+  properties:
+    name?:
+      type: string
+      maxLength: 255
+    status?:
+      type: integer
+      description: 'ACTIVE - 1, INACTIVE - 0'
+    attributes?: AttributeRequest[]
   example: !include examples/TemplateRequest.json
 
 QualifierRequest:

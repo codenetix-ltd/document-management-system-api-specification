@@ -9,3 +9,6 @@ mock_update:
 update:
 	make doc_update
 	make mock_update
+run:
+	make run_doc_dev
+	make run_mock_dev
