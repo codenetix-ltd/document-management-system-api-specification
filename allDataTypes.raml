@@ -74,6 +74,10 @@ Template:
     name:
       type: string
       example: 'Example template name'
+    version: integer
+    status:
+      type: integer
+      description: 'ACTIVE - 1, INACTIVE - 0'
     attributes: Attribute[]
   example: !include examples/Template.json
 User:
@@ -441,6 +445,9 @@ TemplateRequest:
     name:
       type: string
       maxLength: 255
+    status?:
+      type: integer
+      description: 'ACTIVE - 1, INACTIVE - 0'
     attributes: AttributeRequest[]
   example: !include examples/TemplateRequest.json
 

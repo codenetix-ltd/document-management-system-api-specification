@@ -5,6 +5,8 @@
   "template": {
     "id": 1234500,
     "name": "Example template",
+    "status": 1,
+    "version": 1,
     "attributes": [
       {
         "id": 89268332,
